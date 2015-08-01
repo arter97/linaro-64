@@ -1,4 +1,4 @@
-# Copyright (C) 2010-2014 Free Software Foundation, Inc.
+# Copyright (C) 2010-2015 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,7 +28,7 @@ class _GdbFile (object):
     # These two are needed in Python 3
     encoding = "UTF-8"
     errors = "strict"
-    
+
     def close(self):
         # Do nothing.
         return None
@@ -67,8 +67,46 @@ pretty_printers = []
 
 # Initial type printers.
 type_printers = []
+# Initial xmethod matchers.
+xmethods = []
 # Initial frame filters.
 frame_filters = {}
+# Initial frame unwinders.
+frame_unwinders = []
+
+def execute_unwinders(pending_frame):
+    """Internal function called from GDB to execute all unwinders.
+
+    Runs each currently enabled unwinder until it finds the one that
+    can unwind given frame.
+
+    Arguments:
+        pending_frame: gdb.PendingFrame instance.
+    Returns:
+        gdb.UnwindInfo instance or None.
+    """
+    for objfile in _gdb.objfiles():
+        for unwinder in objfile.frame_unwinders:
+            if unwinder.enabled:
+                unwind_info = unwinder(pending_frame)
+                if unwind_info is not None:
+                    return unwind_info
+
+    current_progspace = _gdb.current_progspace()
+    for unwinder in current_progspace.frame_unwinders:
+        if unwinder.enabled:
+            unwind_info = unwinder(pending_frame)
+            if unwind_info is not None:
+                return unwind_info
+
+    for unwinder in frame_unwinders:
+        if unwinder.enabled:
+            unwind_info = unwinder(pending_frame)
+            if unwind_info is not None:
+                return unwind_info
+
+    return None
+
 
 # Convenience variable to GDB's python directory
 PYTHONDIR = os.path.dirname(os.path.dirname(__file__))
@@ -79,7 +117,8 @@ PYTHONDIR = os.path.dirname(os.path.dirname(__file__))
 
 packages = [
     'function',
-    'command'
+    'command',
+    'printer'
 ]
 
 # pkgutil.iter_modules is not available prior to Python 2.6.  Instead,
