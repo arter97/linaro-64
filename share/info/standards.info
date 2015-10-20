@@ -1,4 +1,4 @@
-This is standards.info, produced by makeinfo version 5.1 from
+This is standards.info, produced by makeinfo version 5.2 from
 standards.texi.
 
 The GNU coding standards, last updated April 12, 2010.
@@ -696,6 +696,7 @@ If you want to mention the column number, use one of these formats:
 
      SOURCE-FILE-NAME:LINENO:COLUMN: MESSAGE
      SOURCE-FILE-NAME:LINENO.COLUMN: MESSAGE
+
 
 Line numbers should start from 1 at the beginning of the file, and
 column numbers should start from 1 at the beginning of the line.  (Both
@@ -5663,57 +5664,57 @@ Node: Non-GNU Standards21688
 Node: Semantics23969
 Node: Libraries28689
 Node: Errors29934
-Node: User Interfaces32427
-Node: Graphical Interfaces34032
-Node: Command-Line Interfaces35215
-Node: --version37245
-Node: --help42964
-Node: Option Table43837
-Node: OID Allocations58792
-Node: Memory Usage60589
-Node: File Usage61625
-Node: Writing C62375
-Node: Formatting63345
-Node: Comments67634
-Node: Syntactic Conventions71185
-Node: Names74647
-Node: System Portability76859
-Node: CPU Portability79750
-Node: System Functions83652
-Node: Internationalization88844
-Node: Character Set92838
-Node: Quote Characters93651
-Node: Mmap95171
-Node: Documentation95879
-Node: GNU Manuals96985
-Node: Doc Strings and Manuals102723
-Node: Manual Structure Details104276
-Node: License for Manuals105694
-Node: Manual Credits106667
-Node: Printed Manuals107060
-Node: NEWS File107746
-Node: Change Logs108424
-Node: Change Log Concepts109178
-Node: Style of Change Logs111281
-Node: Simple Changes113781
-Node: Conditional Changes115223
-Node: Indicating the Part Changed116645
-Node: Man Pages117172
-Node: Reading other Manuals119346
-Node: Managing Releases120137
-Node: Configuration120917
-Node: Makefile Conventions129580
-Node: Makefile Basics130462
-Node: Utilities in Makefiles133636
-Node: Command Variables135782
-Node: DESTDIR139005
-Node: Directory Variables141154
-Node: Standard Targets155639
-Ref: Standard Targets-Footnote-1169155
-Node: Install Command Categories169256
-Node: Releases173789
-Node: References177793
-Node: GNU Free Documentation License183639
-Node: Index208786
+Node: User Interfaces32428
+Node: Graphical Interfaces34033
+Node: Command-Line Interfaces35216
+Node: --version37246
+Node: --help42965
+Node: Option Table43838
+Node: OID Allocations58793
+Node: Memory Usage60590
+Node: File Usage61626
+Node: Writing C62376
+Node: Formatting63346
+Node: Comments67635
+Node: Syntactic Conventions71186
+Node: Names74648
+Node: System Portability76860
+Node: CPU Portability79751
+Node: System Functions83653
+Node: Internationalization88845
+Node: Character Set92839
+Node: Quote Characters93652
+Node: Mmap95172
+Node: Documentation95880
+Node: GNU Manuals96986
+Node: Doc Strings and Manuals102724
+Node: Manual Structure Details104277
+Node: License for Manuals105695
+Node: Manual Credits106668
+Node: Printed Manuals107061
+Node: NEWS File107747
+Node: Change Logs108425
+Node: Change Log Concepts109179
+Node: Style of Change Logs111282
+Node: Simple Changes113782
+Node: Conditional Changes115224
+Node: Indicating the Part Changed116646
+Node: Man Pages117173
+Node: Reading other Manuals119347
+Node: Managing Releases120138
+Node: Configuration120918
+Node: Makefile Conventions129581
+Node: Makefile Basics130463
+Node: Utilities in Makefiles133637
+Node: Command Variables135783
+Node: DESTDIR139006
+Node: Directory Variables141155
+Node: Standard Targets155640
+Ref: Standard Targets-Footnote-1169156
+Node: Install Command Categories169257
+Node: Releases173790
+Node: References177794
+Node: GNU Free Documentation License183640
+Node: Index208788
 
 End Tag Table
