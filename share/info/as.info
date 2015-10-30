@@ -1,4 +1,4 @@
-This is as.info, produced by makeinfo version 5.2 from as.texinfo.
+This is as.info, produced by makeinfo version 6.0 from as.texinfo.
 
 This file documents the GNU Assembler "as".
 
@@ -22379,9 +22379,10 @@ compatibility with other Z8000 assemblers.  These do not begin with '.'
      (where XX represents a two-digit hexadecimal number) to represent
      the character whose ASCII value is XX.  Use this feature to
      describe single quote and other characters that may not appear in
-     string literals as themselves.  For example, the C statement 'char *a = "he said \"it's 50% off\"";'
-     is represented in Z8000 assembly language (shown with the assembler
-     output in hex at the left) as
+     string literals as themselves.  For example, the C statement
+     'char *a = "he said \"it's 50% off\"";' is represented in Z8000
+     assembly language (shown with the assembler output in hex at the
+     left) as
 
           68652073    sval    'he said %22it%27s 50%25 off%22%00'
           61696420
@@ -24223,7 +24224,7 @@ AS Index
 * Blackfin options (none):               Blackfin Options.    (line   6)
 * Blackfin support:                      Blackfin-Dependent.  (line   6)
 * Blackfin syntax:                       Blackfin Syntax.     (line   6)
-* block:                                 Z8000 Directives.    (line  54)
+* block:                                 Z8000 Directives.    (line  55)
 * BMI, i386:                             i386-BMI.            (line   6)
 * BMI, x86-64:                           i386-BMI.            (line   6)
 * branch improvement, M680x0:            M68K-Branch.         (line   6)
@@ -24504,7 +24505,7 @@ AS Index
 * ESA/390-only directives:               ESA/390 Directives.  (line  12)
 * escape codes, character:               Strings.             (line  15)
 * 'eval' directive, TIC54X:              TIC54X-Directives.   (line  22)
-* even:                                  Z8000 Directives.    (line  57)
+* even:                                  Z8000 Directives.    (line  58)
 * 'even' directive, M680x0:              M68K-Directives.     (line  15)
 * 'even' directive, TIC54X:              TIC54X-Directives.   (line   6)
 * 'exitm' directive:                     Macro.               (line 140)
@@ -25477,7 +25478,7 @@ AS Index
 * RL78 modifiers:                        RL78-Modifiers.      (line   6)
 * RL78 options:                          RL78-Opts.           (line   6)
 * RL78 support:                          RL78-Dependent.      (line   6)
-* rsect:                                 Z8000 Directives.    (line  51)
+* rsect:                                 Z8000 Directives.    (line  52)
 * RX assembler directive .3byte:         RX-Directives.       (line   9)
 * RX assembler directive .fetchalign:    RX-Directives.       (line  13)
 * RX assembler directives:               RX-Directives.       (line   6)
@@ -26618,13 +26619,13 @@ Node: Z8000-Chars809876
 Node: Z8000-Regs810358
 Node: Z8000-Addressing811148
 Node: Z8000 Directives812258
-Node: Z8000 Opcodes813862
-Node: Reporting Bugs823804
-Node: Bug Criteria824530
-Node: Bug Reporting825297
-Node: Acknowledgements831972
-Ref: Acknowledgements-Footnote-1836938
-Node: GNU Free Documentation License836964
-Node: AS Index862114
+Node: Z8000 Opcodes813867
+Node: Reporting Bugs823809
+Node: Bug Criteria824535
+Node: Bug Reporting825302
+Node: Acknowledgements831977
+Ref: Acknowledgements-Footnote-1836943
+Node: GNU Free Documentation License836969
+Node: AS Index862119
 
 End Tag Table
