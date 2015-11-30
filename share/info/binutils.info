@@ -43,7 +43,7 @@ Introduction
 ************
 
 This brief manual contains documentation for the GNU binary utilities
-(Linux/GNU Binutils) version 2.25.51.0.3:
+(Linux/GNU Binutils) version 2.25.51.0.4:
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -132,8 +132,7 @@ archive.  Instead the elements of the first archive are added
 individually to the second archive.
 
    The paths to the elements of the archive are stored relative to the
-archive itself.  For security reasons absolute paths and paths with a
-'/../' component are not allowed.
+archive itself.
 
    GNU 'ar' is designed to be compatible with two different facilities.
 You can control its activity using command-line options, like the
@@ -882,6 +881,7 @@ File: binutils.info,  Node: objcopy,  Next: objdump,  Prev: nm,  Up: Top
              [--localize-symbols=FILENAME]
              [--globalize-symbols=FILENAME]
              [--weaken-symbols=FILENAME]
+             [--add-symbol NAME=[SECTION:]VALUE[,FLAGS]
              [--alt-machine-code=INDEX]
              [--prefix-symbols=STRING]
              [--prefix-sections=STRING]
@@ -1259,6 +1259,19 @@ the '--reverse-bytes' option.)
      '--update-section', and the original and new section names to
      '--rename-section'.
 
+'--add-symbol NAME=[SECTION:]VALUE[,FLAGS]'
+     Add a new symbol named NAME while copying the file.  This option
+     may be specified multiple times.  If the SECTION is given, the
+     symbol will be associated with and relative to that section,
+     otherwise it will be an ABS symbol.  Specifying an undefined
+     section will result in a fatal error.  There is no check for the
+     value, it will be taken as specified.  Symbol flags can be
+     specified and not all flags will be meaningful for all object file
+     formats.  By default, the symbol will be global.  The special flag
+     'before=OTHERSYM' will insert the new symbol in front of the
+     specified OTHERSYM, otherwise the symbol(s) will be added at the
+     end of the symbol table in the order they appear.
+
 '--rename-section OLDNAME=NEWNAME[,FLAGS]'
      Rename a section from OLDNAME to NEWNAME, optionally changing the
      section's flags to FLAGS in the process.  This has the advantage
@@ -1482,6 +1495,12 @@ the '--reverse-bytes' option.)
      intact.  In ELF files, this preserves all note sections in the
      output.
 
+     Note - the section headers of the stripped sections are preserved,
+     including their sizes, but the contents of the section are
+     discarded.  The section headers are preserved so that other tools
+     can match up the debuginfo file with the real executable, even if
+     that executable has been relocated to a different address space.
+
      The intention is that this option will be used in conjunction with
      '--add-gnu-debuglink' to create a two part executable.  One a
      stripped binary which will occupy less space in RAM and in a
@@ -1584,10 +1603,9 @@ the '--reverse-bytes' option.)
      '--just-symbols' linker input file.
 
 '--compress-debug-sections'
-     Compress DWARF debug sections using zlib.  The debug sections are
-     renamed to begin with '.zdebug' instead of '.debug'.  Note - if
-     compression would actually make a section _larger_ then it is not
-     compressed or renamed.
+     Compress DWARF debug sections using zlib with SHF_COMPRESSED from
+     the ELF ABI. Note - if compression would actually make a section
+     _larger_, then it is not compressed.
 
 '--compress-debug-sections=none'
 '--compress-debug-sections=zlib'
@@ -1596,10 +1614,12 @@ the '--reverse-bytes' option.)
      For ELF files, these options control how DWARF debug sections are
      compressed.  '--compress-debug-sections=none' is equivalent to
      '--nocompress-debug-sections'.  '--compress-debug-sections=zlib'
-     and '--compress-debug-sections=zlib-gnu' are equivalent to
-     '--compress-debug-sections'.  '--compress-debug-sections=zlib-gabi'
-     compresses DWARF debug sections with SHF_COMPRESSED from the ELF
-     ABI.
+     and '--compress-debug-sections=zlib-gabi' are equivalent to
+     '--compress-debug-sections'.  '--compress-debug-sections=zlib-gnu'
+     compresses DWARF debug sections using zlib.  The debug sections are
+     renamed to begin with '.zdebug' instead of '.debug'.  Note - if
+     compression would actually make a section _larger_, then it is not
+     compressed nor renamed.
 
 '--decompress-debug-sections'
      Decompress DWARF debug sections using zlib.  The original section
@@ -2375,6 +2395,7 @@ File: binutils.info,  Node: strings,  Next: strip,  Prev: size,  Up: Top
              [-] [--all] [--print-file-name]
              [-T BFDNAME] [--target=BFDNAME]
              [-w] [--include-all-whitespace]
+             [-s] [--output-separatorSEP_STRING]
              [--help] [--version] FILE...
 
    For each FILE given, GNU 'strings' prints the printable character
@@ -2470,6 +2491,13 @@ files.
      newlines and carriage returns, are not.  The '-w' option changes
      this so that all whitespace characters are considered to be part of
      a string.
+
+'-s'
+'--output-separator'
+     By default, output strings are delimited by a new-line.  This
+     option allows you to supply any string to be used as the output
+     record separator.  Useful with -include-all-whitespace where
+     strings may contain new-lines internally.
 
 
 File: binutils.info,  Node: strip,  Next: c++filt,  Prev: strings,  Up: Top
@@ -2624,10 +2652,16 @@ modified copies under different names.
      names, which would otherwise get stripped.
 
 '--only-keep-debug'
-     Strip a file, removing contents of any sections that would not be
-     stripped by '--strip-debug' and leaving the debugging sections
-     intact.  In ELF files, this preserves all note sections in the
-     output.
+     Strip a file, emptying the contents of any sections that would not
+     be stripped by '--strip-debug' and leaving the debugging sections
+     intact.  In ELF files, this preserves all the note sections in the
+     output as well.
+
+     Note - the section headers of the stripped sections are preserved,
+     including their sizes, but the contents of the section are
+     discarded.  The section headers are preserved so that other tools
+     can match up the debuginfo file with the real executable, even if
+     that executable has been relocated to a different address space.
 
      The intention is that this option will be used in conjunction with
      '--add-gnu-debuglink' to create a two part executable.  One a
@@ -4827,8 +4861,8 @@ Binutils Index
 
 * -enable-deterministic-archives:        ar cmdline.          (line 150)
 * -enable-deterministic-archives <1>:    ar cmdline.          (line 223)
-* -enable-deterministic-archives <2>:    objcopy.             (line 294)
-* -enable-deterministic-archives <3>:    objcopy.             (line 304)
+* -enable-deterministic-archives <2>:    objcopy.             (line 295)
+* -enable-deterministic-archives <3>:    objcopy.             (line 305)
 * -enable-deterministic-archives <4>:    ranlib.              (line  32)
 * -enable-deterministic-archives <5>:    ranlib.              (line  44)
 * -enable-deterministic-archives <6>:    strip.               (line 106)
@@ -4839,7 +4873,7 @@ Binutils Index
 * address to file name and line number:  addr2line.           (line   6)
 * all header information, object file:   objdump.             (line 582)
 * ar:                                    ar.                  (line   6)
-* 'ar' compatibility:                    ar.                  (line  61)
+* 'ar' compatibility:                    ar.                  (line  60)
 * architecture:                          objdump.             (line 209)
 * architectures available:               objdump.             (line 194)
 * archive contents:                      ranlib.              (line   6)
@@ -4852,13 +4886,13 @@ Binutils Index
 * bugs:                                  Reporting Bugs.      (line   6)
 * bugs, reporting:                       Bug Reporting.       (line   6)
 * c++filt:                               c++filt.             (line   6)
-* changing object addresses:             objcopy.             (line 339)
-* changing section address:              objcopy.             (line 349)
-* changing section LMA:                  objcopy.             (line 358)
-* changing section VMA:                  objcopy.             (line 371)
-* changing start address:                objcopy.             (line 334)
+* changing object addresses:             objcopy.             (line 340)
+* changing section address:              objcopy.             (line 350)
+* changing section LMA:                  objcopy.             (line 359)
+* changing section VMA:                  objcopy.             (line 372)
+* changing start address:                objcopy.             (line 335)
 * collections of files:                  ar.                  (line   6)
-* compatibility, 'ar':                   ar.                  (line  61)
+* compatibility, 'ar':                   ar.                  (line  60)
 * contents of archive:                   ar cmdline.          (line  97)
 * crash:                                 Bug Criteria.        (line   9)
 * creating archives:                     ar cmdline.          (line 144)
@@ -4875,8 +4909,8 @@ Binutils Index
 * demangling in objdump <1>:             addr2line.           (line  84)
 * deterministic archives:                ar cmdline.          (line 150)
 * deterministic archives <1>:            ar cmdline.          (line 223)
-* deterministic archives <2>:            objcopy.             (line 294)
-* deterministic archives <3>:            objcopy.             (line 304)
+* deterministic archives <2>:            objcopy.             (line 295)
+* deterministic archives <3>:            objcopy.             (line 305)
 * deterministic archives <4>:            ranlib.              (line  32)
 * deterministic archives <5>:            ranlib.              (line  44)
 * deterministic archives <6>:            strip.               (line 106)
@@ -4937,7 +4971,7 @@ Binutils Index
 * object code format:                    nm.                  (line 277)
 * object code format <1>:                objdump.             (line  84)
 * object code format <2>:                size.                (line  84)
-* object code format <3>:                strings.             (line  93)
+* object code format <3>:                strings.             (line  94)
 * object code format <4>:                addr2line.           (line  79)
 * object file header:                    objdump.             (line 155)
 * object file information:               objdump.             (line   6)
@@ -5003,33 +5037,33 @@ Binutils Index
 Tag Table:
 Node: Top1893
 Node: ar3616
-Node: ar cmdline6838
-Node: ar scripts17171
-Node: nm22857
-Node: objcopy32677
-Node: objdump67863
-Node: ranlib90938
-Node: size92537
-Node: strings95513
-Node: strip99560
-Node: c++filt106774
-Ref: c++filt-Footnote-1111588
-Node: addr2line111694
-Node: nlmconv116223
-Node: windmc118802
-Node: windres122459
-Node: dlltool128818
-Node: def file format141815
-Node: readelf144345
-Node: elfedit152036
-Node: Common Options154288
-Node: Selecting the Target System155322
-Node: Target Selection156254
-Node: Architecture Selection158235
-Node: Reporting Bugs159063
-Node: Bug Criteria159842
-Node: Bug Reporting160395
-Node: GNU Free Documentation License167296
-Node: Binutils Index192456
+Node: ar cmdline6750
+Node: ar scripts17083
+Node: nm22769
+Node: objcopy32589
+Node: objdump69071
+Node: ranlib92146
+Node: size93745
+Node: strings96721
+Node: strip101093
+Node: c++filt108672
+Ref: c++filt-Footnote-1113486
+Node: addr2line113592
+Node: nlmconv118121
+Node: windmc120700
+Node: windres124357
+Node: dlltool130716
+Node: def file format143713
+Node: readelf146243
+Node: elfedit153934
+Node: Common Options156186
+Node: Selecting the Target System157220
+Node: Target Selection158152
+Node: Architecture Selection160133
+Node: Reporting Bugs160961
+Node: Bug Criteria161740
+Node: Bug Reporting162293
+Node: GNU Free Documentation License169194
+Node: Binutils Index194354
 
 End Tag Table

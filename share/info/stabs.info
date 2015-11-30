@@ -3845,9 +3845,8 @@ F.2 Having the Linker Relocate Stabs in ELF
 ===========================================
 
 This section describes some Sun hacks for Stabs in ELF; it does not
-apply to COFF or SOM. While {No value for 'GDBN'} no longer supports
-this hack for Sun Stabs in ELF, this section is kept to document the
-issue.
+apply to COFF or SOM. While GDB no longer supports this hack for Sun
+Stabs in ELF, this section is kept to document the issue.
 
    To keep linking fast, you don't want the linker to have to relocate
 very many stabs.  Making sure this is done for 'N_SLINE', 'N_RBRAC', and
@@ -4574,7 +4573,7 @@ Node: Questions141077
 Node: Stab Sections142718
 Node: Stab Section Basics143328
 Node: ELF Linker Relocation146670
-Node: GNU Free Documentation License150207
-Node: Symbol Types Index175367
+Node: GNU Free Documentation License150189
+Node: Symbol Types Index175349
 
 End Tag Table

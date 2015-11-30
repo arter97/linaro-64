@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "OBJCOPY 1"
-.TH OBJCOPY 1 "2015-10-30" "binutils-2.25.51.0.3" "GNU Development Tools"
+.TH OBJCOPY 1 "2015-11-30" "binutils-2.25.51.0.4" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -196,6 +196,7 @@ objcopy [\fB\-F\fR \fIbfdname\fR|\fB\-\-target=\fR\fIbfdname\fR]
         [\fB\-\-localize\-symbols=\fR\fIfilename\fR]
         [\fB\-\-globalize\-symbols=\fR\fIfilename\fR]
         [\fB\-\-weaken\-symbols=\fR\fIfilename\fR]
+        [\fB\-\-add\-symbol\fR \fIname\fR=[\fIsection\fR:]\fIvalue\fR[,\fIflags\fR]
         [\fB\-\-alt\-machine\-code=\fR\fIindex\fR]
         [\fB\-\-prefix\-symbols=\fR\fIstring\fR]
         [\fB\-\-prefix\-sections=\fR\fIstring\fR]
@@ -658,6 +659,18 @@ Note \- it is possible to use \fB\-\-rename\-section\fR and
 command line.  In this case, pass the original section name to
 \&\fB\-\-update\-section\fR, and the original and new section names to
 \&\fB\-\-rename\-section\fR.
+.IP "\fB\-\-add\-symbol\fR \fIname\fR\fB=[\fR\fIsection\fR\fB:]\fR\fIvalue\fR\fB[,\fR\fIflags\fR\fB]\fR" 4
+.IX Item "--add-symbol name=[section:]value[,flags]"
+Add a new symbol named \fIname\fR while copying the file.  This option may be
+specified multiple times.  If the \fIsection\fR is given, the symbol will be
+associated with and relative to that section, otherwise it will be an \s-1ABS\s0
+symbol.  Specifying an undefined section will result in a fatal error.  There
+is no check for the value, it will be taken as specified.  Symbol flags can
+be specified and not all flags will be meaningful for all object file
+formats.  By default, the symbol will be global.  The special flag
+\&'before=\fIothersym\fR' will insert the new symbol in front of the specified
+\&\fIothersym\fR, otherwise the symbol(s) will be added at the end of the
+symbol table in the order they appear.
 .IP "\fB\-\-rename\-section\fR \fIoldname\fR\fB=\fR\fInewname\fR\fB[,\fR\fIflags\fR\fB]\fR" 4
 .IX Item "--rename-section oldname=newname[,flags]"
 Rename a section from \fIoldname\fR to \fInewname\fR, optionally
@@ -891,6 +904,12 @@ Strip a file, removing contents of any sections that would not be
 stripped by \fB\-\-strip\-debug\fR and leaving the debugging sections
 intact.  In \s-1ELF\s0 files, this preserves all note sections in the output.
 .Sp
+Note \- the section headers of the stripped sections are preserved,
+including their sizes, but the contents of the section are discarded.
+The section headers are preserved so that other tools can match up the
+debuginfo file with the real executable, even if that executable has
+been relocated to a different address space.
+.Sp
 The intention is that this option will be used in conjunction with
 \&\fB\-\-add\-gnu\-debuglink\fR to create a two part executable.  One a
 stripped binary which will occupy less space in \s-1RAM\s0 and in a
@@ -1036,10 +1055,9 @@ linker input file.
 .RE
 .IP "\fB\-\-compress\-debug\-sections\fR" 4
 .IX Item "--compress-debug-sections"
-Compress \s-1DWARF\s0 debug sections using zlib.  The debug sections are
-renamed to begin with \fB.zdebug\fR instead of \fB.debug\fR.  Note \-
-if compression would actually make a section \fIlarger\fR then it is
-not compressed or renamed.
+Compress \s-1DWARF\s0 debug sections using zlib with \s-1SHF_COMPRESSED\s0 from the
+\&\s-1ELF ABI. \s0 Note \- if compression would actually make a section
+\&\fIlarger\fR, then it is not compressed.
 .IP "\fB\-\-compress\-debug\-sections=none\fR" 4
 .IX Item "--compress-debug-sections=none"
 .PD 0
@@ -1054,10 +1072,13 @@ For \s-1ELF\s0 files, these options control how \s-1DWARF\s0 debug sections are
 compressed.  \fB\-\-compress\-debug\-sections=none\fR is equivalent
 to \fB\-\-nocompress\-debug\-sections\fR.
 \&\fB\-\-compress\-debug\-sections=zlib\fR and
-\&\fB\-\-compress\-debug\-sections=zlib\-gnu\fR are equivalent to
+\&\fB\-\-compress\-debug\-sections=zlib\-gabi\fR are equivalent to
 \&\fB\-\-compress\-debug\-sections\fR.
-\&\fB\-\-compress\-debug\-sections=zlib\-gabi\fR compresses
-\&\s-1DWARF\s0 debug sections with \s-1SHF_COMPRESSED\s0 from the \s-1ELF ABI.\s0
+\&\fB\-\-compress\-debug\-sections=zlib\-gnu\fR compresses \s-1DWARF\s0 debug
+sections using zlib.  The debug sections are renamed to begin with
+\&\fB.zdebug\fR instead of \fB.debug\fR.  Note \- if compression would
+actually make a section \fIlarger\fR, then it is not compressed nor
+renamed.
 .IP "\fB\-\-decompress\-debug\-sections\fR" 4
 .IX Item "--decompress-debug-sections"
 Decompress \s-1DWARF\s0 debug sections using zlib.  The original section
