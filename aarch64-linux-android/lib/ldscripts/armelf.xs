@@ -1,5 +1,5 @@
 /* Script for ld --shared: link shared library */
-/* Copyright (C) 2014-2015 Free Software Foundation, Inc.
+/* Copyright (C) 2014-2016 Free Software Foundation, Inc.
    Copying and distribution of this script, with or without modification,
    are permitted in any medium without royalty provided the copyright
    notice and this notice are preserved.  */
@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("/home/arter97/linaro-64/aarch64-linux-android/lib");
+SEARCH_DIR("=/home/arter97/linaro-64/aarch64-linux-android/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
@@ -115,13 +115,13 @@ SECTIONS
   }
   .init_array     :
   {
-    KEEP (*(SORT(.init_array.*)))
-    KEEP (*(.init_array ))
+    KEEP (*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))
+    KEEP (*(.init_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .ctors))
   }
   .fini_array     :
   {
-    KEEP (*(SORT(.fini_array.*)))
-    KEEP (*(.fini_array ))
+    KEEP (*(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*)))
+    KEEP (*(.fini_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .dtors))
   }
   .ctors          :
   {
@@ -230,5 +230,5 @@ SECTIONS
   }
   .ARM.attributes 0 : { KEEP (*(.ARM.attributes)) KEEP (*(.gnu.attributes)) }
   .note.gnu.arm.ident 0 : { KEEP (*(.note.gnu.arm.ident)) }
-  /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }
+  /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) *(.gnu_object_only) }
 }
