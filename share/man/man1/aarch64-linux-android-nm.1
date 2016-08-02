@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "NM 1"
-.TH NM 1 "2016-07-21" "binutils-2.26.51.0.1" "GNU Development Tools"
+.TH NM 1 "2016-08-02" "binutils-2.26.51.0.2" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -491,11 +491,12 @@ types.  This option is only available if the toolchain has been built
 with plugin support enabled.
 .IP "\fB\-\-size\-sort\fR" 4
 .IX Item "--size-sort"
-Sort symbols by size.  The size is computed as the difference between
-the value of the symbol and the value of the symbol with the next higher
-value.  If the \f(CW\*(C`bsd\*(C'\fR output format is used the size of the symbol
-is printed, rather than the value, and \fB\-S\fR must be used in order
-both size and value to be printed.
+Sort symbols by size.  For \s-1ELF\s0 objects symbol sizes are read from the
+\&\s-1ELF,\s0 for other object types the symbol sizes are computed as the
+difference between the value of the symbol and the value of the symbol
+with the next higher value.  If the \f(CW\*(C`bsd\*(C'\fR output format is used
+the size of the symbol is printed, rather than the value, and
+\&\fB\-S\fR must be used in order both size and value to be printed.
 .IP "\fB\-\-special\-syms\fR" 4
 .IX Item "--special-syms"
 Display symbols which have a target-specific special meaning.  These

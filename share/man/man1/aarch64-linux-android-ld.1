@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "LD 1"
-.TH LD 1 "2016-07-21" "binutils-2.26.51.0.1" "GNU Development Tools"
+.TH LD 1 "2016-08-02" "binutils-2.26.51.0.2" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -1077,6 +1077,11 @@ Don't treat undefined weak symbols as dynamic when building executable.
 This option overrides linker backend default.  It can be used to avoid
 dynamic relocations against undefined weak symbols in executable.
 Supported for i386 and x86\-64.
+.IP "\fBnoreloc-overflow\fR" 4
+.IX Item "noreloc-overflow"
+Disable relocation overflow check.  This can be used to disable
+relocation overflow check if there will be no dynamic relocation
+overflow at run-time.  Supported for x86_64.
 .IP "\fBcall\-nop=prefix\-addr\fR" 4
 .IX Item "call-nop=prefix-addr"
 .PD 0
