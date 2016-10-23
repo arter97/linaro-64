@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2016-08-22" "gcc-6.2.1" "GNU"
+.TH GCC 1 "2016-10-16" "gcc-6.2.1" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -13460,7 +13460,8 @@ of the \fB\-mcpu=\fR option.  Permissible names are: \fBarmv2\fR,
 \&\fBarmv6t2\fR, \fBarmv6z\fR, \fBarmv6zk\fR,
 \&\fBarmv7\fR, \fBarmv7\-a\fR, \fBarmv7\-m\fR, \fBarmv7\-r\fR, \fBarmv7e\-m\fR,
 \&\fBarmv7ve\fR, \fBarmv8\-a\fR, \fBarmv8\-a+crc\fR, \fBarmv8.1\-a\fR,
-\&\fBarmv8.1\-a+crc\fR, \fBiwmmxt\fR, \fBiwmmxt2\fR.
+\&\fBarmv8.1\-a+crc\fR, \fBarmv8\-m.base\fR, \fBarmv8\-m.main\fR,
+\&\fBarmv8\-m.main+dsp\fR, \fBiwmmxt\fR, \fBiwmmxt2\fR.
 .Sp
 Architecture revisions older than \fBarmv4t\fR are deprecated.
 .Sp
@@ -13475,6 +13476,19 @@ extensions.
 .Sp
 \&\fB\-march=armv8\-a+crc\fR enables code generation for the ARMv8\-A
 architecture together with the optional \s-1CRC32\s0 extensions.
+.Sp
+\&\fB\-march=armv8.1\-a\fR enables compiler support for the ARMv8.1\-A
+architecture.  This also enables the features provided by
+\&\fB\-march=armv8\-a+crc\fR.
+.Sp
+\&\fB\-march=armv8.2\-a\fR enables compiler support for the ARMv8.2\-A
+architecture.  This also enables the features provided by
+\&\fB\-march=armv8.1\-a\fR.
+.Sp
+\&\fB\-march=armv8.2\-a+fp16\fR enables compiler support for the
+ARMv8.2\-A architecture with the optional \s-1FP16\s0 instructions extension.
+This also enables the features provided by \fB\-march=armv8.1\-a\fR
+and implies \fB\-mfp16\-format=ieee\fR.
 .Sp
 \&\fB\-march=native\fR causes the compiler to auto-detect the architecture
 of the build computer.  At present, this feature is only supported on
@@ -13758,10 +13772,10 @@ generating these instructions.  This option is enabled by default when
 .PD
 Enables (or disables) reading and writing of 16\- and 32\- bit values
 from addresses that are not 16\- or 32\- bit aligned.  By default
-unaligned access is disabled for all pre\-ARMv6 and all ARMv6\-M
-architectures, and enabled for all other architectures.  If unaligned
-access is not enabled then words in packed data structures are
-accessed a byte at a time.
+unaligned access is disabled for all pre\-ARMv6, all ARMv6\-M and for
+ARMv8\-M Baseline architectures, and enabled for all other
+architectures.  If unaligned access is not enabled then words in packed
+data structures are accessed a byte at a time.
 .Sp
 The \s-1ARM\s0 attribute \f(CW\*(C`Tag_CPU_unaligned_access\*(C'\fR is set in the
 generated object file to either true or false, depending upon the

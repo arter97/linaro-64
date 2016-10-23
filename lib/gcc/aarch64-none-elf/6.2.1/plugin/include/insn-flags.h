@@ -337,10 +337,16 @@
 #define HAVE_smaxdf3 (TARGET_FLOAT)
 #define HAVE_sminsf3 (TARGET_FLOAT)
 #define HAVE_smindf3 (TARGET_FLOAT)
+#define HAVE_smax_nanhf3 ((TARGET_FLOAT) && (AARCH64_ISA_F16))
+#define HAVE_smin_nanhf3 ((TARGET_FLOAT) && (AARCH64_ISA_F16))
 #define HAVE_fmaxhf3 ((TARGET_FLOAT) && (AARCH64_ISA_F16))
 #define HAVE_fminhf3 ((TARGET_FLOAT) && (AARCH64_ISA_F16))
+#define HAVE_smax_nansf3 (TARGET_FLOAT)
+#define HAVE_smin_nansf3 (TARGET_FLOAT)
 #define HAVE_fmaxsf3 (TARGET_FLOAT)
 #define HAVE_fminsf3 (TARGET_FLOAT)
+#define HAVE_smax_nandf3 (TARGET_FLOAT)
+#define HAVE_smin_nandf3 (TARGET_FLOAT)
 #define HAVE_fmaxdf3 (TARGET_FLOAT)
 #define HAVE_fmindf3 (TARGET_FLOAT)
 #define HAVE_aarch64_movdi_tilow (TARGET_FLOAT && (reload_completed || reload_in_progress))
@@ -1002,22 +1008,22 @@
 #define HAVE_sminv2df3 (TARGET_SIMD)
 #define HAVE_smax_nanv4hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
 #define HAVE_smin_nanv4hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
-#define HAVE_smax_nanv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
-#define HAVE_smin_nanv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
-#define HAVE_smax_nanv2sf3 (TARGET_SIMD)
-#define HAVE_smin_nanv2sf3 (TARGET_SIMD)
-#define HAVE_smax_nanv4sf3 (TARGET_SIMD)
-#define HAVE_smin_nanv4sf3 (TARGET_SIMD)
-#define HAVE_smax_nanv2df3 (TARGET_SIMD)
-#define HAVE_smin_nanv2df3 (TARGET_SIMD)
 #define HAVE_fmaxv4hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
 #define HAVE_fminv4hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
+#define HAVE_smax_nanv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
+#define HAVE_smin_nanv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
 #define HAVE_fmaxv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
 #define HAVE_fminv8hf3 ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
+#define HAVE_smax_nanv2sf3 (TARGET_SIMD)
+#define HAVE_smin_nanv2sf3 (TARGET_SIMD)
 #define HAVE_fmaxv2sf3 (TARGET_SIMD)
 #define HAVE_fminv2sf3 (TARGET_SIMD)
+#define HAVE_smax_nanv4sf3 (TARGET_SIMD)
+#define HAVE_smin_nanv4sf3 (TARGET_SIMD)
 #define HAVE_fmaxv4sf3 (TARGET_SIMD)
 #define HAVE_fminv4sf3 (TARGET_SIMD)
+#define HAVE_smax_nanv2df3 (TARGET_SIMD)
+#define HAVE_smin_nanv2df3 (TARGET_SIMD)
 #define HAVE_fmaxv2df3 (TARGET_SIMD)
 #define HAVE_fminv2df3 (TARGET_SIMD)
 #define HAVE_aarch64_faddpv4hf ((TARGET_SIMD) && (TARGET_SIMD_F16INST))
@@ -3789,10 +3795,16 @@ extern rtx        gen_smaxsf3                             (rtx, rtx, rtx);
 extern rtx        gen_smaxdf3                             (rtx, rtx, rtx);
 extern rtx        gen_sminsf3                             (rtx, rtx, rtx);
 extern rtx        gen_smindf3                             (rtx, rtx, rtx);
+extern rtx        gen_smax_nanhf3                         (rtx, rtx, rtx);
+extern rtx        gen_smin_nanhf3                         (rtx, rtx, rtx);
 extern rtx        gen_fmaxhf3                             (rtx, rtx, rtx);
 extern rtx        gen_fminhf3                             (rtx, rtx, rtx);
+extern rtx        gen_smax_nansf3                         (rtx, rtx, rtx);
+extern rtx        gen_smin_nansf3                         (rtx, rtx, rtx);
 extern rtx        gen_fmaxsf3                             (rtx, rtx, rtx);
 extern rtx        gen_fminsf3                             (rtx, rtx, rtx);
+extern rtx        gen_smax_nandf3                         (rtx, rtx, rtx);
+extern rtx        gen_smin_nandf3                         (rtx, rtx, rtx);
 extern rtx        gen_fmaxdf3                             (rtx, rtx, rtx);
 extern rtx        gen_fmindf3                             (rtx, rtx, rtx);
 extern rtx        gen_aarch64_movdi_tilow                 (rtx, rtx);
@@ -4414,22 +4426,22 @@ extern rtx        gen_smaxv2df3                           (rtx, rtx, rtx);
 extern rtx        gen_sminv2df3                           (rtx, rtx, rtx);
 extern rtx        gen_smax_nanv4hf3                       (rtx, rtx, rtx);
 extern rtx        gen_smin_nanv4hf3                       (rtx, rtx, rtx);
-extern rtx        gen_smax_nanv8hf3                       (rtx, rtx, rtx);
-extern rtx        gen_smin_nanv8hf3                       (rtx, rtx, rtx);
-extern rtx        gen_smax_nanv2sf3                       (rtx, rtx, rtx);
-extern rtx        gen_smin_nanv2sf3                       (rtx, rtx, rtx);
-extern rtx        gen_smax_nanv4sf3                       (rtx, rtx, rtx);
-extern rtx        gen_smin_nanv4sf3                       (rtx, rtx, rtx);
-extern rtx        gen_smax_nanv2df3                       (rtx, rtx, rtx);
-extern rtx        gen_smin_nanv2df3                       (rtx, rtx, rtx);
 extern rtx        gen_fmaxv4hf3                           (rtx, rtx, rtx);
 extern rtx        gen_fminv4hf3                           (rtx, rtx, rtx);
+extern rtx        gen_smax_nanv8hf3                       (rtx, rtx, rtx);
+extern rtx        gen_smin_nanv8hf3                       (rtx, rtx, rtx);
 extern rtx        gen_fmaxv8hf3                           (rtx, rtx, rtx);
 extern rtx        gen_fminv8hf3                           (rtx, rtx, rtx);
+extern rtx        gen_smax_nanv2sf3                       (rtx, rtx, rtx);
+extern rtx        gen_smin_nanv2sf3                       (rtx, rtx, rtx);
 extern rtx        gen_fmaxv2sf3                           (rtx, rtx, rtx);
 extern rtx        gen_fminv2sf3                           (rtx, rtx, rtx);
+extern rtx        gen_smax_nanv4sf3                       (rtx, rtx, rtx);
+extern rtx        gen_smin_nanv4sf3                       (rtx, rtx, rtx);
 extern rtx        gen_fmaxv4sf3                           (rtx, rtx, rtx);
 extern rtx        gen_fminv4sf3                           (rtx, rtx, rtx);
+extern rtx        gen_smax_nanv2df3                       (rtx, rtx, rtx);
+extern rtx        gen_smin_nanv2df3                       (rtx, rtx, rtx);
 extern rtx        gen_fmaxv2df3                           (rtx, rtx, rtx);
 extern rtx        gen_fminv2df3                           (rtx, rtx, rtx);
 extern rtx        gen_aarch64_faddpv4hf                   (rtx, rtx, rtx);

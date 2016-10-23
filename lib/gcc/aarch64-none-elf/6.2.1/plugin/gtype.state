@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "6.2.1 20160822")
+(!version  "6.2.1 20161016")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp fortran go java jit lto objc objcp)
 (!fileslist 199
@@ -16751,15 +16751,15 @@
    (!type already_seen 921)
   )
   gc_pointed_to "vec<tree_gc_vec,va_gc>"
-  (!srcfileloc  "c-family/c-common.c" 12231)
+  (!srcfileloc  "c-family/c-common.c" 12233)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 3)
-    (!srcfileloc  "c-family/c-common.c" 12231)
+    (!srcfileloc  "c-family/c-common.c" 12233)
     nil )
    (!pair  "tree_gc_vec"
     (!type already_seen 49)
-    (!srcfileloc  "c-family/c-common.c" 12231)
+    (!srcfileloc  "c-family/c-common.c" 12233)
     nil )
   )
  )
@@ -19307,27 +19307,27 @@
    (!type already_seen 1195)
   )
   gc_pointed_to "grid_launch_attributes_trees"
-  (!srcfileloc  "omp-low.c" 12770)
+  (!srcfileloc  "omp-low.c" 12772)
   (!fields 5 
    (!pair  "kernel_dim_array_type"
     (!type already_seen 5)
-    (!srcfileloc  "omp-low.c" 12765)
+    (!srcfileloc  "omp-low.c" 12767)
     nil )
    (!pair  "kernel_lattrs_dimnum_decl"
     (!type already_seen 5)
-    (!srcfileloc  "omp-low.c" 12766)
+    (!srcfileloc  "omp-low.c" 12768)
     nil )
    (!pair  "kernel_lattrs_grid_decl"
     (!type already_seen 5)
-    (!srcfileloc  "omp-low.c" 12767)
+    (!srcfileloc  "omp-low.c" 12769)
     nil )
    (!pair  "kernel_lattrs_group_decl"
     (!type already_seen 5)
-    (!srcfileloc  "omp-low.c" 12768)
+    (!srcfileloc  "omp-low.c" 12770)
     nil )
    (!pair  "kernel_launch_attributes_type"
     (!type already_seen 5)
-    (!srcfileloc  "omp-low.c" 12769)
+    (!srcfileloc  "omp-low.c" 12771)
     nil )
   )
   nil 1023 nil nil )
@@ -21240,14 +21240,14 @@
   nil 0 nil nil )
  
  (!type user_struct 1427 nil  gc_unused "hash_table<loc_list_hasher>"
-  (!srcfileloc  "dwarf2out.c" 27509)
+  (!srcfileloc  "dwarf2out.c" 27510)
   (!fields 1 
    (!pair  "loc_list_hasher"
     (!type struct 1428 nil  gc_unused "loc_list_hasher"
-     (!srcfileloc  "dwarf2out.c" 27509)
+     (!srcfileloc  "dwarf2out.c" 27510)
      (!fields 0 )
      nil 1023 nil nil )
-    (!srcfileloc  "dwarf2out.c" 27509)
+    (!srcfileloc  "dwarf2out.c" 27510)
     nil )
   )
  )
@@ -21259,14 +21259,14 @@
   nil 0 nil nil )
  
  (!type user_struct 1430 nil  gc_unused "hash_table<macinfo_entry_hasher>"
-  (!srcfileloc  "dwarf2out.c" 25017)
+  (!srcfileloc  "dwarf2out.c" 25018)
   (!fields 1 
    (!pair  "macinfo_entry_hasher"
     (!type struct 1431 nil  gc_unused "macinfo_entry_hasher"
-     (!srcfileloc  "dwarf2out.c" 25017)
+     (!srcfileloc  "dwarf2out.c" 25018)
      (!fields 0 )
      nil 1023 nil nil )
-    (!srcfileloc  "dwarf2out.c" 25017)
+    (!srcfileloc  "dwarf2out.c" 25018)
     nil )
   )
  )
@@ -25695,11 +25695,11 @@
   nil )
  (!pair  "vec<tree_gc_vec,va_gc>"
   (!type already_seen 921)
-  (!srcfileloc  "c-family/c-common.c" 12231)
+  (!srcfileloc  "c-family/c-common.c" 12233)
   nil )
  (!pair  "tree_gc_vec"
   (!type already_seen 49)
-  (!srcfileloc  "c-family/c-common.c" 12230)
+  (!srcfileloc  "c-family/c-common.c" 12232)
   nil )
  (!pair  "vec<const_char_p,va_gc>"
   (!type already_seen 923)
@@ -25735,7 +25735,7 @@
   nil )
  (!pair  "builtin_type"
   (!type already_seen 9)
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5561)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5569)
   nil )
  (!pair  "pad_type_hasher"
   (!type already_seen 948)
@@ -26095,31 +26095,31 @@
   nil )
  (!pair  "aarch64_atomic_load_op_fn"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 11599)
+  (!srcfileloc  "config/aarch64/aarch64.c" 11650)
   nil )
  (!pair  "gen_cas_fn"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 11312)
+  (!srcfileloc  "config/aarch64/aarch64.c" 11363)
   nil )
  (!pair  "recps_type"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 7549)
+  (!srcfileloc  "config/aarch64/aarch64.c" 7600)
   nil )
  (!pair  "recpe_type"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 7531)
+  (!srcfileloc  "config/aarch64/aarch64.c" 7582)
   nil )
  (!pair  "rsqrts_type"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 7429)
+  (!srcfileloc  "config/aarch64/aarch64.c" 7480)
   nil )
  (!pair  "rsqrte_type"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 7410)
+  (!srcfileloc  "config/aarch64/aarch64.c" 7461)
   nil )
  (!pair  "aarch64_cc"
   (!type already_seen 9)
-  (!srcfileloc  "config/aarch64/aarch64.c" 823)
+  (!srcfileloc  "config/aarch64/aarch64.c" 874)
   nil )
  (!pair  "use_optype_p"
   (!type already_seen 428)
@@ -26479,27 +26479,27 @@
   nil )
  (!pair  "loc_list_hash_type"
   (!type already_seen 1427)
-  (!srcfileloc  "dwarf2out.c" 27509)
+  (!srcfileloc  "dwarf2out.c" 27510)
   nil )
  (!pair  "loc_list_hasher"
   (!type already_seen 1428)
-  (!srcfileloc  "dwarf2out.c" 27509)
+  (!srcfileloc  "dwarf2out.c" 27510)
   nil )
  (!pair  "hash_table<loc_list_hasher>"
   (!type already_seen 1427)
-  (!srcfileloc  "dwarf2out.c" 27509)
+  (!srcfileloc  "dwarf2out.c" 27510)
   nil )
  (!pair  "macinfo_hash_type"
   (!type already_seen 1430)
-  (!srcfileloc  "dwarf2out.c" 25017)
+  (!srcfileloc  "dwarf2out.c" 25018)
   nil )
  (!pair  "macinfo_entry_hasher"
   (!type already_seen 1431)
-  (!srcfileloc  "dwarf2out.c" 25017)
+  (!srcfileloc  "dwarf2out.c" 25018)
   nil )
  (!pair  "hash_table<macinfo_entry_hasher>"
   (!type already_seen 1430)
-  (!srcfileloc  "dwarf2out.c" 25017)
+  (!srcfileloc  "dwarf2out.c" 25018)
   nil )
  (!pair  "external_ref_hash_type"
   (!type already_seen 1437)
@@ -27974,7 +27974,7 @@
   nil )
  (!pair  "compression_table"
   (!type already_seen 5)
-  (!srcfileloc  "java/mangle.c" 295)
+  (!srcfileloc  "java/mangle.c" 303)
   nil )
  (!pair  "atms"
   (!type already_seen 5)
@@ -28693,7 +28693,7 @@
  )
  (!pair  "cv_cache"
   (!type already_seen 419)
-  (!srcfileloc  "cp/constexpr.c" 4376)
+  (!srcfileloc  "cp/constexpr.c" 4385)
   (!options 
    (!option deletable string  "")
   )
@@ -28739,7 +28739,7 @@
  )
  (!pair  "abort_fndecl_addr"
   (!type already_seen 5)
-  (!srcfileloc  "cp/class.c" 9343)
+  (!srcfileloc  "cp/class.c" 9499)
   nil )
  (!pair  "sizeof_biggest_empty_class"
   (!type already_seen 5)
@@ -29078,7 +29078,7 @@
  )
  (!pair  "tree_vector_cache"
   (!type already_seen 922)
-  (!srcfileloc  "c-family/c-common.c" 12231)
+  (!srcfileloc  "c-family/c-common.c" 12233)
   (!options 
    (!option deletable string  "")
   )
@@ -29155,17 +29155,17 @@
   (!type array 1821 nil  gc_used "(int) ATTR_LAST" 
    (!type already_seen 5)
   )
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5730)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5738)
   nil )
  (!pair  "builtin_types"
   (!type array 1822 nil  gc_used "(int) BT_LAST + 1" 
    (!type already_seen 5)
   )
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5564)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5572)
   nil )
  (!pair  "dummy_global"
   (!type already_seen 5)
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5333)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5341)
   nil )
  (!pair  "pad_type_hash_table"
   (!type already_seen 947)
@@ -29428,15 +29428,15 @@
  )
  (!pair  "va_list_type"
   (!type already_seen 5)
-  (!srcfileloc  "config/aarch64/aarch64.c" 9491)
+  (!srcfileloc  "config/aarch64/aarch64.c" 9542)
   nil )
  (!pair  "aarch64_previous_fndecl"
   (!type already_seen 5)
-  (!srcfileloc  "config/aarch64/aarch64.c" 8557)
+  (!srcfileloc  "config/aarch64/aarch64.c" 8608)
   nil )
  (!pair  "tls_get_addr_libfunc"
   (!type already_seen 135)
-  (!srcfileloc  "config/aarch64/aarch64.c" 1113)
+  (!srcfileloc  "config/aarch64/aarch64.c" 1164)
   nil )
  (!pair  "stack_chk_fail_decl"
   (!type already_seen 5)
@@ -29456,11 +29456,11 @@
   nil )
  (!pair  "critical_name_mutexes"
   (!type already_seen 419)
-  (!srcfileloc  "omp-low.c" 14819)
+  (!srcfileloc  "omp-low.c" 14821)
   nil )
  (!pair  "grid_attr_trees"
   (!type already_seen 1196)
-  (!srcfileloc  "omp-low.c" 12772)
+  (!srcfileloc  "omp-low.c" 12774)
   nil )
  (!pair  "trampoline_type"
   (!type already_seen 5)
@@ -29836,7 +29836,7 @@
   nil )
  (!pair  "stack_check_libfunc"
   (!type already_seen 135)
-  (!srcfileloc  "explow.c" 1513)
+  (!srcfileloc  "explow.c" 1521)
   nil )
  (!pair  "hard_reg_clobbers"
   (!type array 1836 nil  gc_used "NUM_MACHINE_MODES" 
