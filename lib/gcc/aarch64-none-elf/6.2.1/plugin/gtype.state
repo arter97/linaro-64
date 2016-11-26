@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "6.2.1 20161016")
+(!version  "6.2.1 20161114")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp fortran go java jit lto objc objcp)
 (!fileslist 199
@@ -23247,15 +23247,15 @@
  (!type already_seen 553)
  
  (!type struct 1633 nil  gc_used "int_n_trees_t"
-  (!srcfileloc  "tree.h" 5364)
+  (!srcfileloc  "tree.h" 5369)
   (!fields 2 
    (!pair  "signed_type"
     (!type already_seen 5)
-    (!srcfileloc  "tree.h" 5362)
+    (!srcfileloc  "tree.h" 5367)
     nil )
    (!pair  "unsigned_type"
     (!type already_seen 5)
-    (!srcfileloc  "tree.h" 5363)
+    (!srcfileloc  "tree.h" 5368)
     nil )
   )
   nil 1023 nil nil )
@@ -25771,7 +25771,7 @@
   nil )
  (!pair  "vinfo_t"
   (!type already_seen 965)
-  (!srcfileloc  "ada/gcc-interface/decl.c" 7128)
+  (!srcfileloc  "ada/gcc-interface/decl.c" 7129)
   nil )
  (!pair  "intrin_binding_t"
   (!type already_seen 967)
@@ -27900,7 +27900,7 @@
   nil )
  (!pair  "lto_eh_personality_decl"
   (!type already_seen 5)
-  (!srcfileloc  "lto/lto.c" 3176)
+  (!srcfileloc  "lto/lto.c" 3180)
   nil )
  (!pair  "real_file_decl_data"
   (!type already_seen 356)
@@ -28739,7 +28739,7 @@
  )
  (!pair  "abort_fndecl_addr"
   (!type already_seen 5)
-  (!srcfileloc  "cp/class.c" 9499)
+  (!srcfileloc  "cp/class.c" 9512)
   nil )
  (!pair  "sizeof_biggest_empty_class"
   (!type already_seen 5)
@@ -29579,11 +29579,11 @@
   nil )
  (!pair  "elf_fini_array_section"
   (!type already_seen 245)
-  (!srcfileloc  "varasm.c" 7722)
+  (!srcfileloc  "varasm.c" 7713)
   nil )
  (!pair  "elf_init_array_section"
   (!type already_seen 245)
-  (!srcfileloc  "varasm.c" 7721)
+  (!srcfileloc  "varasm.c" 7712)
   nil )
  (!pair  "tm_clone_hash"
   (!type already_seen 1265)
@@ -29646,7 +29646,7 @@
   nil )
  (!pair  "gcc_eh_personality_decl"
   (!type already_seen 5)
-  (!srcfileloc  "tree.c" 12396)
+  (!srcfileloc  "tree.c" 12407)
   nil )
  (!pair  "nonstandard_boolean_type_cache"
   (!type array 1834 nil  gc_used "MAX_BOOL_CACHED_PREC + 1" 
@@ -30472,7 +30472,7 @@
   (!type array 1842 nil  gc_used "NUM_INT_N_ENTS" 
    (!type already_seen 1633)
   )
-  (!srcfileloc  "tree.h" 5368)
+  (!srcfileloc  "tree.h" 5373)
   nil )
  (!pair  "stack_limit_rtx"
   (!type already_seen 135)
