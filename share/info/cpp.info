@@ -1,4 +1,4 @@
-This is cpp.info, produced by makeinfo version 6.1 from cpp.texi.
+This is cpp.info, produced by makeinfo version 5.2 from cpp.texi.
 
 Copyright (C) 1987-2016 Free Software Foundation, Inc.
 
@@ -5307,7 +5307,7 @@ without any initial '-' or '--'.
 * D:                                     Invocation.          (line  40)
 * dD:                                    Invocation.          (line 597)
 * DEPENDENCIES_OUTPUT:                   Environment Variables.
-                                                              (line  45)
+                                                              (line  44)
 * dI:                                    Invocation.          (line 606)
 * dM:                                    Invocation.          (line 582)
 * dN:                                    Invocation.          (line 603)
@@ -5360,7 +5360,7 @@ without any initial '-' or '--'.
 * remap:                                 Invocation.          (line 655)
 * std=:                                  Invocation.          (line 311)
 * SUNPRO_DEPENDENCIES:                   Environment Variables.
-                                                              (line  61)
+                                                              (line  60)
 * target-help:                           Invocation.          (line 660)
 * traditional-cpp:                       Invocation.          (line 648)
 * trigraphs:                             Invocation.          (line 652)
@@ -5390,9 +5390,9 @@ Concept Index
  [index ]
 * Menu:
 
-* # operator:                            Stringification.     (line   6)
-* ## operator:                           Concatenation.       (line   6)
-* _Pragma:                               Pragmas.             (line  25)
+* '#' operator:                          Stringification.     (line   6)
+* '##' operator:                         Concatenation.       (line   6)
+* '_Pragma':                             Pragmas.             (line  25)
 * alternative tokens:                    Tokenization.        (line 104)
 * arguments:                             Macro Arguments.     (line   6)
 * arguments in macro definitions:        Macro Arguments.     (line   6)
@@ -5416,12 +5416,12 @@ Concept Index
 * conditionals:                          Conditionals.        (line   6)
 * continued lines:                       Initial processing.  (line  61)
 * controlling macro:                     Once-Only Headers.   (line  35)
-* defined:                               Defined.             (line   6)
+* 'defined':                             Defined.             (line   6)
 * dependencies for make as output:       Environment Variables.
-                                                              (line  46)
+                                                              (line  45)
 * dependencies for make as output <1>:   Environment Variables.
-                                                              (line  62)
-* dependencies, make:                    Invocation.          (line 181)
+                                                              (line  61)
+* dependencies, 'make':                  Invocation.          (line 181)
 * diagnostic:                            Diagnostics.         (line   6)
 * differences from previous versions:    Differences from previous versions.
                                                               (line   6)
@@ -5451,7 +5451,7 @@ Concept Index
                                                               (line   6)
 * including just once:                   Once-Only Headers.   (line   6)
 * invocation:                            Invocation.          (line   6)
-* iso646.h:                              C++ Named Operators. (line   6)
+* 'iso646.h':                            C++ Named Operators. (line   6)
 * line comments:                         Initial processing.  (line  77)
 * line control:                          Line Control.        (line   6)
 * line endings:                          Initial processing.  (line  14)
@@ -5462,7 +5462,7 @@ Concept Index
 * macros in include:                     Computed Includes.   (line   6)
 * macros with arguments:                 Macro Arguments.     (line   6)
 * macros with variable arguments:        Variadic Macros.     (line   6)
-* make:                                  Invocation.          (line 181)
+* 'make':                                Invocation.          (line 181)
 * manifest constants:                    Object-like Macros.  (line   6)
 * named operators:                       C++ Named Operators. (line   6)
 * newlines in macro arguments:           Newlines in Arguments.
@@ -5523,7 +5523,7 @@ Concept Index
                                                               (line   6)
 * variable number of arguments:          Variadic Macros.     (line   6)
 * variadic macros:                       Variadic Macros.     (line   6)
-* wrapper #ifndef:                       Once-Only Headers.   (line   6)
+* wrapper '#ifndef':                     Once-Only Headers.   (line   6)
 * wrapper headers:                       Wrapper Headers.     (line   6)
 
 

@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/arter97/linaro-64/lib/../lib'
+libdir='/home/tcwg-buildslave/workspace/tcwg-make-release/label/docker-trusty-amd64-tcwg-build/target/aarch64-linux-gnu/_build/builds/destdir/x86_64-unknown-linux-gnu/lib/../lib'
