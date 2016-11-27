@@ -161,7 +161,6 @@ SECTIONS
   .debug_ranges   0 : { *(.debug_ranges) }
   /* DWARF Extension.  */
   .debug_macro    0 : { *(.debug_macro) }
-  .debug_addr     0 : { *(.debug_addr) }
     .stack        0 :
   {
     *(.stack)

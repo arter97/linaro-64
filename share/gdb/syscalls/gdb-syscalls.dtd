@@ -11,5 +11,4 @@
 <!ELEMENT syscall		EMPTY>
 <!ATTLIST syscall
 	name			CDATA	#REQUIRED
-	number			CDATA	#REQUIRED
-	groups			CDATA	#IMPLIED>
+	number			CDATA	#REQUIRED>
