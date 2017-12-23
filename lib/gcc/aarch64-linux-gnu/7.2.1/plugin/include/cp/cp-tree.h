@@ -6125,7 +6125,7 @@ extern bool maybe_clone_body			(tree);
 /* In parser.c */
 extern tree cp_convert_range_for (tree, tree, tree, tree, unsigned int, bool);
 extern bool parsing_nsdmi (void);
-extern bool parsing_default_capturing_generic_lambda_in_template (void);
+extern bool parsing_default_capturing_generic_lambda (void);
 extern void inject_this_parameter (tree, cp_cv_quals);
 
 /* in pt.c */
@@ -6703,6 +6703,7 @@ extern tree convert_bitfield_to_declared_type   (tree);
 extern tree cp_save_expr			(tree);
 extern bool cast_valid_in_integral_constant_expression_p (tree);
 extern bool cxx_type_hash_eq			(const_tree, const_tree);
+extern tree cxx_copy_lang_qualifiers		(const_tree, const_tree);
 
 extern void cxx_print_statistics		(void);
 extern bool maybe_warn_zero_as_null_pointer_constant (tree, location_t);

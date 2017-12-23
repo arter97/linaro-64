@@ -1,5 +1,6 @@
 #ifndef GCC_TM_H
 #define GCC_TM_H
+#define TARGET_CPU_DEFAULT (TARGET_CPU_generic | ((  AARCH64_FL_FOR_ARCH8) << 6))
 #ifndef LIBC_GLIBC
 # define LIBC_GLIBC 1
 #endif
@@ -17,6 +18,12 @@
 #endif
 #ifndef ANDROID_DEFAULT
 # define ANDROID_DEFAULT 0
+#endif
+#ifndef TARGET_FIX_ERR_A53_835769_DEFAULT
+# define TARGET_FIX_ERR_A53_835769_DEFAULT 1
+#endif
+#ifndef TARGET_FIX_ERR_A53_843419_DEFAULT
+# define TARGET_FIX_ERR_A53_843419_DEFAULT 1
 #endif
 #ifdef IN_GCC
 # include "options.h"

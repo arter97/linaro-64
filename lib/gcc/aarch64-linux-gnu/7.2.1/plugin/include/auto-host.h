@@ -92,7 +92,7 @@
 
 /* Define if your target supports default PIE and it is enabled. */
 #ifndef USED_FOR_TARGET
-#define ENABLE_DEFAULT_PIE 1
+/* #undef ENABLE_DEFAULT_PIE */
 #endif
 
 
@@ -160,7 +160,7 @@
 
 /* Define if gcc should always pass --build-id to linker. */
 #ifndef USED_FOR_TARGET
-/* #undef ENABLE_LD_BUILDID */
+#define ENABLE_LD_BUILDID 1
 #endif
 
 
@@ -179,7 +179,7 @@
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
 #ifndef USED_FOR_TARGET
-/* #undef ENABLE_NLS */
+#define ENABLE_NLS 1
 #endif
 
 
@@ -694,7 +694,7 @@
 
 /* Define if your assembler and linker support thread-local storage. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_AS_TLS */
+#define HAVE_AS_TLS 1
 #endif
 
 
@@ -1406,7 +1406,7 @@
 /* Define 0/1 if .init_array/.fini_array sections are available and working.
    */
 #ifndef USED_FOR_TARGET
-#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 0
 #endif
 
 
@@ -1862,7 +1862,7 @@
 
 /* Define to 1 if you have the <unordered_map> header file. */
 #ifndef USED_FOR_TARGET
-#define HAVE_UNORDERED_MAP 1
+/* #undef HAVE_UNORDERED_MAP */
 #endif
 
 
@@ -1874,7 +1874,7 @@
 
 /* Define if valgrind's valgrind/memcheck.h header is installed. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_VALGRIND_MEMCHECK_H */
+#define HAVE_VALGRIND_MEMCHECK_H 1
 #endif
 
 
@@ -1930,7 +1930,7 @@
 
 /* Define if isl is in use. */
 #ifndef USED_FOR_TARGET
-#define HAVE_isl 1
+/* #undef HAVE_isl */
 #endif
 
 
