@@ -4,8 +4,8 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "7.2.1 20171011")
-(!srcdir  "/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc")
+(!version  "7.2.1 20180115")
+(!srcdir  "../../linaro/gcc")
 (!languages 10 ada brig c cp fortran go jit lto objc objcp)
 (!fileslist 199
  (!srcfile 1023  "../libcpp/include/line-map.h")
@@ -457,11 +457,11 @@
                    (!srcfileloc  "tree-core.h" 916)
                    nil )
                   (!pair  "u"
-                   (!type union 25 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-core.h:918"
+                   (!type union 25 nil  gc_unused "anonymous:../../linaro/gcc/tree-core.h:918"
                     (!srcfileloc  "tree-core.h" 985)
                     (!fields 6 
                      (!pair  "bits"
-                      (!type struct 26 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-core.h:921"
+                      (!type struct 26 nil  gc_unused "anonymous:../../linaro/gcc/tree-core.h:921"
                        (!srcfileloc  "tree-core.h" 944)
                        (!fields 16 
                         (!pair  "lang_flag_0"
@@ -533,7 +533,7 @@
                       (!srcfileloc  "tree-core.h" 944)
                       nil )
                      (!pair  "int_length"
-                      (!type struct 27 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-core.h:951"
+                      (!type struct 27 nil  gc_unused "anonymous:../../linaro/gcc/tree-core.h:951"
                        (!srcfileloc  "tree-core.h" 965)
                        (!fields 3 
                         (!pair  "unextended"
@@ -565,7 +565,7 @@
                       (!srcfileloc  "tree-core.h" 974)
                       nil )
                      (!pair  "dependence_info"
-                      (!type struct 28 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-core.h:981"
+                      (!type struct 28 nil  gc_unused "anonymous:../../linaro/gcc/tree-core.h:981"
                        (!srcfileloc  "tree-core.h" 984)
                        (!fields 2 
                         (!pair  "clique"
@@ -1398,19 +1398,19 @@
                                                       (!fields 4 
                                                        (!pair  "binfo"
                                                         (!type already_seen 22)
-                                                        (!srcfileloc  "cp/cp-tree.h" 6360)
+                                                        (!srcfileloc  "cp/cp-tree.h" 6361)
                                                         nil )
                                                        (!pair  "decl"
                                                         (!type already_seen 22)
-                                                        (!srcfileloc  "cp/cp-tree.h" 6362)
+                                                        (!srcfileloc  "cp/cp-tree.h" 6363)
                                                         nil )
                                                        (!pair  "diag_decl"
                                                         (!type already_seen 22)
-                                                        (!srcfileloc  "cp/cp-tree.h" 6364)
+                                                        (!srcfileloc  "cp/cp-tree.h" 6365)
                                                         nil )
                                                        (!pair  "loc"
                                                         (!type already_seen 2)
-                                                        (!srcfileloc  "cp/cp-tree.h" 6366)
+                                                        (!srcfileloc  "cp/cp-tree.h" 6367)
                                                         nil )
                                                       )
                                                       nil 520 nil nil )
@@ -2318,7 +2318,7 @@
                        (!srcfileloc  "rtl.h" 395)
                        nil )
                       (!pair  "u2"
-                       (!type union 131 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/rtl.h:397"
+                       (!type union 131 nil  gc_unused "anonymous:../../linaro/gcc/rtl.h:397"
                         (!srcfileloc  "rtl.h" 418)
                         (!fields 5 
                          (!pair  "original_regno"
@@ -4861,47 +4861,47 @@
                                  (!type struct 248 
                                   (!type already_seen 247)
                                   gc_pointed_to "constant_descriptor_rtx"
-                                  (!srcfileloc  "varasm.c" 3516)
+                                  (!srcfileloc  "varasm.c" 3517)
                                   (!fields 10 
                                    (!pair  "next"
                                     (!type already_seen 247)
-                                    (!srcfileloc  "varasm.c" 3506)
+                                    (!srcfileloc  "varasm.c" 3507)
                                     nil )
                                    (!pair  "mem"
                                     (!type already_seen 128)
-                                    (!srcfileloc  "varasm.c" 3507)
+                                    (!srcfileloc  "varasm.c" 3508)
                                     nil )
                                    (!pair  "sym"
                                     (!type already_seen 128)
-                                    (!srcfileloc  "varasm.c" 3508)
+                                    (!srcfileloc  "varasm.c" 3509)
                                     nil )
                                    (!pair  "constant"
                                     (!type already_seen 128)
-                                    (!srcfileloc  "varasm.c" 3509)
+                                    (!srcfileloc  "varasm.c" 3510)
                                     nil )
                                    (!pair  "offset"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3510)
+                                    (!srcfileloc  "varasm.c" 3511)
                                     nil )
                                    (!pair  "hash"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3511)
+                                    (!srcfileloc  "varasm.c" 3512)
                                     nil )
                                    (!pair  "mode"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3512)
+                                    (!srcfileloc  "varasm.c" 3513)
                                     nil )
                                    (!pair  "align"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3513)
+                                    (!srcfileloc  "varasm.c" 3514)
                                     nil )
                                    (!pair  "labelno"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3514)
+                                    (!srcfileloc  "varasm.c" 3515)
                                     nil )
                                    (!pair  "mark"
                                     (!type already_seen 2)
-                                    (!srcfileloc  "varasm.c" 3515)
+                                    (!srcfileloc  "varasm.c" 3516)
                                     nil )
                                   )
                                   (!options 
@@ -6431,7 +6431,7 @@
                                     )
                                    )
                                    (!pair  "x"
-                                    (!type struct 317 nil  gc_used "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/basic-block.h:140"
+                                    (!type struct 317 nil  gc_used "anonymous:../../linaro/gcc/basic-block.h:140"
                                      (!srcfileloc  "basic-block.h" 143)
                                      (!fields 2 
                                       (!pair  "head_"
@@ -8764,7 +8764,7 @@
                                    (!srcfileloc  "dwarf2out.h" 57)
                                    nil )
                                   (!pair  "dw_cfi_oprnd1"
-                                   (!type union 446 nil  gc_used "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/dwarf2out.h:49"
+                                   (!type union 446 nil  gc_used "anonymous:../../linaro/gcc/dwarf2out.h:49"
                                     (!srcfileloc  "dwarf2out.h" 54)
                                     (!fields 4 
                                      (!pair  "dw_cfi_reg_num"
@@ -9365,7 +9365,7 @@
                                                    (!srcfileloc  "dwarf2out.h" 181)
                                                    nil )
                                                   (!pair  "v"
-                                                   (!type union 479 nil  gc_used "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/dwarf2out.h:183"
+                                                   (!type union 479 nil  gc_used "anonymous:../../linaro/gcc/dwarf2out.h:183"
                                                     (!srcfileloc  "dwarf2out.h" 186)
                                                     (!fields 2 
                                                      (!pair  "sval"
@@ -10828,7 +10828,7 @@
                       )
                      )
                      (!pair  "loc"
-                      (!type union 531 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-core.h:1397"
+                      (!type union 531 nil  gc_unused "anonymous:../../linaro/gcc/tree-core.h:1397"
                        (!srcfileloc  "tree-core.h" 1397)
                        (!fields 2 
                         (!pair  "stmt"
@@ -12614,7 +12614,7 @@
                             (!srcfileloc  "c/c-decl.c" 198)
                             (!fields 11 
                              (!pair  "u"
-                              (!type union 606 nil  gc_used "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/c/c-decl.c:184"
+                              (!type union 606 nil  gc_used "anonymous:../../linaro/gcc/c/c-decl.c:184"
                                (!srcfileloc  "c/c-decl.c" 187)
                                (!fields 2 
                                 (!pair  "type"
@@ -13903,7 +13903,7 @@
   )
   nil 1023 nil nil )
  
- (!type struct 660 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/../libcpp/include/line-map.h:1242"nil 
+ (!type struct 660 nil  gc_unused "anonymous:../../linaro/gcc/../libcpp/include/line-map.h:1242"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -13989,11 +13989,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 677 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/../libcpp/include/cpplib.h:1113"nil 
+ (!type struct 677 nil  gc_unused "anonymous:../../linaro/gcc/../libcpp/include/cpplib.h:1113"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 678 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/../libcpp/include/cpplib.h:1124"nil 
+ (!type struct 678 nil  gc_unused "anonymous:../../linaro/gcc/../libcpp/include/cpplib.h:1124"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -14374,7 +14374,7 @@
     (!srcfileloc  "gimple.h" 359)
     nil )
    (!pair  "u"
-    (!type union 722 nil  gc_used "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/gimple.h:362"
+    (!type union 722 nil  gc_used "anonymous:../../linaro/gcc/gimple.h:362"
      (!srcfileloc  "gimple.h" 365)
      (!fields 2 
       (!pair  "fntype"
@@ -15012,7 +15012,7 @@
  
  (!type already_seen 434)
  
- (!type struct 771 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/config/aarch64/aarch64.h:655"nil 
+ (!type struct 771 nil  gc_unused "anonymous:../../linaro/gcc/config/aarch64/aarch64.h:655"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -16335,38 +16335,38 @@
    (!type already_seen 871)
   )
   gc_pointed_to "rtx_constant_pool"
-  (!srcfileloc  "varasm.c" 3545)
+  (!srcfileloc  "varasm.c" 3546)
   (!fields 4 
    (!pair  "first"
     (!type already_seen 247)
-    (!srcfileloc  "varasm.c" 3533)
+    (!srcfileloc  "varasm.c" 3534)
     nil )
    (!pair  "last"
     (!type already_seen 247)
-    (!srcfileloc  "varasm.c" 3534)
+    (!srcfileloc  "varasm.c" 3535)
     nil )
    (!pair  "const_rtx_htab"
     (!type pointer 873 nil  gc_used
      (!type user_struct 874 
       (!type already_seen 873)
       gc_pointed_to "hash_table<const_rtx_desc_hasher>"
-      (!srcfileloc  "varasm.c" 3540)
+      (!srcfileloc  "varasm.c" 3541)
       (!fields 1 
        (!pair  "const_rtx_desc_hasher"
         (!type struct 875 nil  gc_used "const_rtx_desc_hasher"
-         (!srcfileloc  "varasm.c" 3540)
+         (!srcfileloc  "varasm.c" 3541)
          (!fields 0 )
          nil 1023 nil nil )
-        (!srcfileloc  "varasm.c" 3540)
+        (!srcfileloc  "varasm.c" 3541)
         nil )
       )
      )
     )
-    (!srcfileloc  "varasm.c" 3540)
+    (!srcfileloc  "varasm.c" 3541)
     nil )
    (!pair  "offset"
     (!type already_seen 2)
-    (!srcfileloc  "varasm.c" 3544)
+    (!srcfileloc  "varasm.c" 3545)
     nil )
   )
   nil 1023 nil nil )
@@ -17697,7 +17697,7 @@
   1023 nil nil )
  
  (!type struct 958 nil  gc_used "tree_descriptor_hasher"
-  (!srcfileloc  "varasm.c" 2895)
+  (!srcfileloc  "varasm.c" 2896)
   (!fields 0 )
   nil 1023 nil nil )
  
@@ -19516,16 +19516,16 @@
   nil 0 nil nil )
  
  (!type struct 1149 nil  gc_unused "macinfo_entry_hasher"
-  (!srcfileloc  "dwarf2out.c" 26858)
+  (!srcfileloc  "dwarf2out.c" 26864)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1150 nil  gc_unused "hash_table<macinfo_entry_hasher>"
-  (!srcfileloc  "dwarf2out.c" 26858)
+  (!srcfileloc  "dwarf2out.c" 26864)
   (!fields 1 
    (!pair  "macinfo_entry_hasher"
     (!type already_seen 1149)
-    (!srcfileloc  "dwarf2out.c" 26858)
+    (!srcfileloc  "dwarf2out.c" 26864)
     nil )
   )
  )
@@ -19535,16 +19535,16 @@
   nil 0 nil nil )
  
  (!type struct 1152 nil  gc_unused "loc_list_hasher"
-  (!srcfileloc  "dwarf2out.c" 29554)
+  (!srcfileloc  "dwarf2out.c" 29560)
   (!fields 0 )
   nil 1023 nil nil )
  
  (!type user_struct 1153 nil  gc_unused "hash_table<loc_list_hasher>"
-  (!srcfileloc  "dwarf2out.c" 29554)
+  (!srcfileloc  "dwarf2out.c" 29560)
   (!fields 1 
    (!pair  "loc_list_hasher"
     (!type already_seen 1152)
-    (!srcfileloc  "dwarf2out.c" 29554)
+    (!srcfileloc  "dwarf2out.c" 29560)
     nil )
   )
  )
@@ -20568,7 +20568,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type union 1263 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/mcf.c:343"nil 
+ (!type union 1263 nil  gc_unused "anonymous:../../linaro/gcc/mcf.c:343"nil 
   (!fields 0 )
   nil 0 nil )
  
@@ -20810,11 +20810,11 @@
    (!type already_seen 1302)
   )
   gc_pointed_to "hash_table<tree_descriptor_hasher>"
-  (!srcfileloc  "varasm.c" 2895)
+  (!srcfileloc  "varasm.c" 2896)
   (!fields 1 
    (!pair  "tree_descriptor_hasher"
     (!type already_seen 958)
-    (!srcfileloc  "varasm.c" 2895)
+    (!srcfileloc  "varasm.c" 2896)
     nil )
   )
  )
@@ -20832,7 +20832,7 @@
   nil 0 nil nil )
  
  (!type struct 1306 nil  gc_used "tm_clone_hasher"
-  (!srcfileloc  "varasm.c" 5858)
+  (!srcfileloc  "varasm.c" 5859)
   (!fields 0 )
   nil 1023 nil nil )
  
@@ -20841,11 +20841,11 @@
    (!type already_seen 1307)
   )
   gc_pointed_to "hash_table<tm_clone_hasher>"
-  (!srcfileloc  "varasm.c" 5858)
+  (!srcfileloc  "varasm.c" 5859)
   (!fields 1 
    (!pair  "tm_clone_hasher"
     (!type already_seen 1306)
-    (!srcfileloc  "varasm.c" 5858)
+    (!srcfileloc  "varasm.c" 5859)
     nil )
   )
  )
@@ -20960,7 +20960,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type union 1319 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/tree-eh.c:50"nil 
+ (!type union 1319 nil  gc_unused "anonymous:../../linaro/gcc/tree-eh.c:50"nil 
   (!fields 0 )
   nil 0 nil )
  
@@ -22093,11 +22093,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1512 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/config/aarch64/aarch64-builtins.c:107"nil 
+ (!type struct 1512 nil  gc_unused "anonymous:../../linaro/gcc/config/aarch64/aarch64-builtins.c:107"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1513 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/config/aarch64/aarch64-builtins.c:341"nil 
+ (!type struct 1513 nil  gc_unused "anonymous:../../linaro/gcc/config/aarch64/aarch64-builtins.c:341"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -22234,7 +22234,7 @@
   )
  )
  
- (!type struct 1538 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/ada/gcc-interface/decl.c:247"nil 
+ (!type struct 1538 nil  gc_unused "anonymous:../../linaro/gcc/ada/gcc-interface/decl.c:247"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -22652,15 +22652,15 @@
    (!type already_seen 1584)
   )
   gc_pointed_to "vec<tree_gc_vec,va_gc>"
-  (!srcfileloc  "c-family/c-common.c" 7510)
+  (!srcfileloc  "c-family/c-common.c" 7511)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 71)
-    (!srcfileloc  "c-family/c-common.c" 7510)
+    (!srcfileloc  "c-family/c-common.c" 7511)
     nil )
    (!pair  "tree_gc_vec"
     (!type already_seen 85)
-    (!srcfileloc  "c-family/c-common.c" 7510)
+    (!srcfileloc  "c-family/c-common.c" 7511)
     nil )
   )
  )
@@ -22982,7 +22982,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1616 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/c/c-parser.c:6645"nil 
+ (!type struct 1616 nil  gc_unused "anonymous:../../linaro/gcc/c/c-parser.c:6645"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -23095,7 +23095,7 @@
   520 nil nil )
  
  (!type struct 1625 nil  gc_used "conv_type_hasher"
-  (!srcfileloc  "cp/mangle.c" 4194)
+  (!srcfileloc  "cp/mangle.c" 4249)
   (!fields 0 )
   nil 520 nil nil )
  
@@ -23104,11 +23104,11 @@
    (!type already_seen 1626)
   )
   gc_pointed_to "hash_table<conv_type_hasher>"
-  (!srcfileloc  "cp/mangle.c" 4194)
+  (!srcfileloc  "cp/mangle.c" 4249)
   (!fields 1 
    (!pair  "conv_type_hasher"
     (!type already_seen 1625)
-    (!srcfileloc  "cp/mangle.c" 4194)
+    (!srcfileloc  "cp/mangle.c" 4249)
     nil )
   )
  )
@@ -23712,15 +23712,15 @@
   nil 0 nil nil )
  
  (!type struct 1679 nil  gc_pointed_to "constr_entry"
-  (!srcfileloc  "cp/pt.c" 25891)
+  (!srcfileloc  "cp/pt.c" 25907)
   (!fields 2 
    (!pair  "decl"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 25889)
+    (!srcfileloc  "cp/pt.c" 25905)
     nil )
    (!pair  "ci"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 25890)
+    (!srcfileloc  "cp/pt.c" 25906)
     nil )
   )
   (!options 
@@ -23729,7 +23729,7 @@
   520 nil nil )
  
  (!type struct 1680 nil  gc_used "constr_hasher"
-  (!srcfileloc  "cp/pt.c" 25914)
+  (!srcfileloc  "cp/pt.c" 25930)
   (!fields 0 )
   nil 520 nil nil )
  
@@ -23738,29 +23738,29 @@
    (!type already_seen 1681)
   )
   gc_pointed_to "hash_table<constr_hasher>"
-  (!srcfileloc  "cp/pt.c" 25914)
+  (!srcfileloc  "cp/pt.c" 25930)
   (!fields 1 
    (!pair  "constr_hasher"
     (!type already_seen 1680)
-    (!srcfileloc  "cp/pt.c" 25914)
+    (!srcfileloc  "cp/pt.c" 25930)
     nil )
   )
  )
  
  (!type struct 1683 nil  gc_pointed_to "constraint_sat_entry"
-  (!srcfileloc  "cp/pt.c" 25981)
+  (!srcfileloc  "cp/pt.c" 25997)
   (!fields 3 
    (!pair  "ci"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 25978)
+    (!srcfileloc  "cp/pt.c" 25994)
     nil )
    (!pair  "args"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 25979)
+    (!srcfileloc  "cp/pt.c" 25995)
     nil )
    (!pair  "result"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 25980)
+    (!srcfileloc  "cp/pt.c" 25996)
     nil )
   )
   (!options 
@@ -23769,24 +23769,24 @@
   520 nil nil )
  
  (!type struct 1684 nil  gc_used "constraint_sat_hasher"
-  (!srcfileloc  "cp/pt.c" 26026)
+  (!srcfileloc  "cp/pt.c" 26042)
   (!fields 0 )
   nil 520 nil nil )
  
  (!type struct 1685 nil  gc_pointed_to "concept_spec_entry"
-  (!srcfileloc  "cp/pt.c" 26006)
+  (!srcfileloc  "cp/pt.c" 26022)
   (!fields 3 
    (!pair  "tmpl"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 26003)
+    (!srcfileloc  "cp/pt.c" 26019)
     nil )
    (!pair  "args"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 26004)
+    (!srcfileloc  "cp/pt.c" 26020)
     nil )
    (!pair  "result"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 26005)
+    (!srcfileloc  "cp/pt.c" 26021)
     nil )
   )
   (!options 
@@ -23795,7 +23795,7 @@
   520 nil nil )
  
  (!type struct 1686 nil  gc_used "concept_spec_hasher"
-  (!srcfileloc  "cp/pt.c" 26027)
+  (!srcfileloc  "cp/pt.c" 26043)
   (!fields 0 )
   nil 520 nil nil )
  
@@ -23804,11 +23804,11 @@
    (!type already_seen 1687)
   )
   gc_pointed_to "hash_table<constraint_sat_hasher>"
-  (!srcfileloc  "cp/pt.c" 26026)
+  (!srcfileloc  "cp/pt.c" 26042)
   (!fields 1 
    (!pair  "constraint_sat_hasher"
     (!type already_seen 1684)
-    (!srcfileloc  "cp/pt.c" 26026)
+    (!srcfileloc  "cp/pt.c" 26042)
     nil )
   )
  )
@@ -23818,29 +23818,29 @@
    (!type already_seen 1689)
   )
   gc_pointed_to "hash_table<concept_spec_hasher>"
-  (!srcfileloc  "cp/pt.c" 26027)
+  (!srcfileloc  "cp/pt.c" 26043)
   (!fields 1 
    (!pair  "concept_spec_hasher"
     (!type already_seen 1686)
-    (!srcfileloc  "cp/pt.c" 26027)
+    (!srcfileloc  "cp/pt.c" 26043)
     nil )
   )
  )
  
  (!type struct 1691 nil  gc_pointed_to "subsumption_entry"
-  (!srcfileloc  "cp/pt.c" 26149)
+  (!srcfileloc  "cp/pt.c" 26165)
   (!fields 3 
    (!pair  "t1"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 26146)
+    (!srcfileloc  "cp/pt.c" 26162)
     nil )
    (!pair  "t2"
     (!type already_seen 22)
-    (!srcfileloc  "cp/pt.c" 26147)
+    (!srcfileloc  "cp/pt.c" 26163)
     nil )
    (!pair  "result"
     (!type already_seen 2)
-    (!srcfileloc  "cp/pt.c" 26148)
+    (!srcfileloc  "cp/pt.c" 26164)
     nil )
   )
   (!options 
@@ -23849,7 +23849,7 @@
   520 nil nil )
  
  (!type struct 1692 nil  gc_used "subsumption_hasher"
-  (!srcfileloc  "cp/pt.c" 26169)
+  (!srcfileloc  "cp/pt.c" 26185)
   (!fields 0 )
   nil 520 nil nil )
  
@@ -23858,11 +23858,11 @@
    (!type already_seen 1693)
   )
   gc_pointed_to "hash_table<subsumption_hasher>"
-  (!srcfileloc  "cp/pt.c" 26169)
+  (!srcfileloc  "cp/pt.c" 26185)
   (!fields 1 
    (!pair  "subsumption_hasher"
     (!type already_seen 1692)
-    (!srcfileloc  "cp/pt.c" 26169)
+    (!srcfileloc  "cp/pt.c" 26185)
     nil )
   )
  )
@@ -24157,7 +24157,7 @@
    (!type already_seen 1726)
   )
   gc_pointed_to "cp_parser"
-  (!srcfileloc  "cp/parser.c" 38024)
+  (!srcfileloc  "cp/parser.c" 38030)
   (!fields 37 
    (!pair  "lexer"
     (!type already_seen 1712)
@@ -24618,7 +24618,7 @@
  (!type already_seen 80)
  
  (!type struct 1770 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.c" 4644)
+  (!srcfileloc  "fortran/trans-decl.c" 4647)
   (!fields 0 )
   nil 16 nil nil )
  
@@ -24627,11 +24627,11 @@
    (!type already_seen 1771)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.c" 4644)
+  (!srcfileloc  "fortran/trans-decl.c" 4647)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 1770)
-    (!srcfileloc  "fortran/trans-decl.c" 4644)
+    (!srcfileloc  "fortran/trans-decl.c" 4647)
     nil )
   )
  )
@@ -24806,7 +24806,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1782 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/fortran/trans.h:33"nil 
+ (!type struct 1782 nil  gc_unused "anonymous:../../linaro/gcc/fortran/trans.h:33"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -24830,11 +24830,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1788 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/fortran/trans.h:389"nil 
+ (!type struct 1788 nil  gc_unused "anonymous:../../linaro/gcc/fortran/trans.h:389"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1789 nil  gc_unused "anonymous:/home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/aarch64-linux-gnu/snapshots/gcc.git~linaro-7.2-2017.11/gcc/fortran/trans.h:401"nil 
+ (!type struct 1789 nil  gc_unused "anonymous:../../linaro/gcc/fortran/trans.h:401"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -25357,11 +25357,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 1770)
-  (!srcfileloc  "fortran/trans-decl.c" 4644)
+  (!srcfileloc  "fortran/trans-decl.c" 4647)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 1771)
-  (!srcfileloc  "fortran/trans-decl.c" 4644)
+  (!srcfileloc  "fortran/trans-decl.c" 4647)
   nil )
  (!pair  "constexpr_call_hasher"
   (!type already_seen 1764)
@@ -25417,7 +25417,7 @@
   nil )
  (!pair  "cp_parser"
   (!type already_seen 1726)
-  (!srcfileloc  "cp/parser.c" 38024)
+  (!srcfileloc  "cp/parser.c" 38030)
   nil )
  (!pair  "tree_int"
   (!type already_seen 1733)
@@ -25527,35 +25527,35 @@
   nil )
  (!pair  "subsumption_hasher"
   (!type already_seen 1692)
-  (!srcfileloc  "cp/pt.c" 26169)
+  (!srcfileloc  "cp/pt.c" 26185)
   nil )
  (!pair  "hash_table<subsumption_hasher>"
   (!type already_seen 1693)
-  (!srcfileloc  "cp/pt.c" 26169)
+  (!srcfileloc  "cp/pt.c" 26185)
   nil )
  (!pair  "concept_spec_hasher"
   (!type already_seen 1686)
-  (!srcfileloc  "cp/pt.c" 26027)
+  (!srcfileloc  "cp/pt.c" 26043)
   nil )
  (!pair  "hash_table<concept_spec_hasher>"
   (!type already_seen 1689)
-  (!srcfileloc  "cp/pt.c" 26027)
+  (!srcfileloc  "cp/pt.c" 26043)
   nil )
  (!pair  "constraint_sat_hasher"
   (!type already_seen 1684)
-  (!srcfileloc  "cp/pt.c" 26026)
+  (!srcfileloc  "cp/pt.c" 26042)
   nil )
  (!pair  "hash_table<constraint_sat_hasher>"
   (!type already_seen 1687)
-  (!srcfileloc  "cp/pt.c" 26026)
+  (!srcfileloc  "cp/pt.c" 26042)
   nil )
  (!pair  "constr_hasher"
   (!type already_seen 1680)
-  (!srcfileloc  "cp/pt.c" 25914)
+  (!srcfileloc  "cp/pt.c" 25930)
   nil )
  (!pair  "hash_table<constr_hasher>"
   (!type already_seen 1681)
-  (!srcfileloc  "cp/pt.c" 25914)
+  (!srcfileloc  "cp/pt.c" 25930)
   nil )
  (!pair  "spec_hasher"
   (!type already_seen 1671)
@@ -25591,7 +25591,7 @@
   nil )
  (!pair  "walk_namespaces_fn"
   (!type already_seen 2)
-  (!srcfileloc  "cp/cp-tree.h" 5888)
+  (!srcfileloc  "cp/cp-tree.h" 5889)
   nil )
  (!pair  "cp_parameter_declarator"
   (!type already_seen 1648)
@@ -25711,11 +25711,11 @@
   nil )
  (!pair  "conv_type_hasher"
   (!type already_seen 1625)
-  (!srcfileloc  "cp/mangle.c" 4194)
+  (!srcfileloc  "cp/mangle.c" 4249)
   nil )
  (!pair  "hash_table<conv_type_hasher>"
   (!type already_seen 1626)
-  (!srcfileloc  "cp/mangle.c" 4194)
+  (!srcfileloc  "cp/mangle.c" 4249)
   nil )
  (!pair  "substitution_identifier_index_t"
   (!type already_seen 2)
@@ -25783,11 +25783,11 @@
   nil )
  (!pair  "vec<tree_gc_vec,va_gc>"
   (!type already_seen 1584)
-  (!srcfileloc  "c-family/c-common.c" 7510)
+  (!srcfileloc  "c-family/c-common.c" 7511)
   nil )
  (!pair  "tree_gc_vec"
   (!type already_seen 85)
-  (!srcfileloc  "c-family/c-common.c" 7509)
+  (!srcfileloc  "c-family/c-common.c" 7510)
   nil )
  (!pair  "vec<const_char_p,va_gc>"
   (!type already_seen 1582)
@@ -25823,7 +25823,7 @@
   nil )
  (!pair  "builtin_type"
   (!type already_seen 2)
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5683)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5702)
   nil )
  (!pair  "pad_type_hasher"
   (!type already_seen 1557)
@@ -25859,7 +25859,7 @@
   nil )
  (!pair  "vinfo_t"
   (!type already_seen 1540)
-  (!srcfileloc  "ada/gcc-interface/decl.c" 7460)
+  (!srcfileloc  "ada/gcc-interface/decl.c" 7461)
   nil )
  (!pair  "intrin_binding_t"
   (!type already_seen 1538)
@@ -26231,27 +26231,27 @@
   nil )
  (!pair  "aarch64_atomic_load_op_fn"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 12577)
+  (!srcfileloc  "config/aarch64/aarch64.c" 12571)
   nil )
  (!pair  "gen_cas_fn"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 12261)
+  (!srcfileloc  "config/aarch64/aarch64.c" 12255)
   nil )
  (!pair  "recps_type"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 8373)
+  (!srcfileloc  "config/aarch64/aarch64.c" 8375)
   nil )
  (!pair  "recpe_type"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 8355)
+  (!srcfileloc  "config/aarch64/aarch64.c" 8357)
   nil )
  (!pair  "rsqrts_type"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 8246)
+  (!srcfileloc  "config/aarch64/aarch64.c" 8248)
   nil )
  (!pair  "rsqrte_type"
   (!type already_seen 2)
-  (!srcfileloc  "config/aarch64/aarch64.c" 8227)
+  (!srcfileloc  "config/aarch64/aarch64.c" 8229)
   nil )
  (!pair  "aarch64_cc"
   (!type already_seen 2)
@@ -26327,27 +26327,27 @@
   nil )
  (!pair  "tm_clone_hasher"
   (!type already_seen 1306)
-  (!srcfileloc  "varasm.c" 5858)
+  (!srcfileloc  "varasm.c" 5859)
   nil )
  (!pair  "hash_table<tm_clone_hasher>"
   (!type already_seen 1307)
-  (!srcfileloc  "varasm.c" 5858)
+  (!srcfileloc  "varasm.c" 5859)
   nil )
  (!pair  "const_rtx_desc_hasher"
   (!type already_seen 875)
-  (!srcfileloc  "varasm.c" 3540)
+  (!srcfileloc  "varasm.c" 3541)
   nil )
  (!pair  "hash_table<const_rtx_desc_hasher>"
   (!type already_seen 874)
-  (!srcfileloc  "varasm.c" 3540)
+  (!srcfileloc  "varasm.c" 3541)
   nil )
  (!pair  "tree_descriptor_hasher"
   (!type already_seen 958)
-  (!srcfileloc  "varasm.c" 2895)
+  (!srcfileloc  "varasm.c" 2896)
   nil )
  (!pair  "hash_table<tree_descriptor_hasher>"
   (!type already_seen 1302)
-  (!srcfileloc  "varasm.c" 2895)
+  (!srcfileloc  "varasm.c" 2896)
   nil )
  (!pair  "object_block_hasher"
   (!type already_seen 1298)
@@ -26655,27 +26655,27 @@
   nil )
  (!pair  "loc_list_hash_type"
   (!type already_seen 1153)
-  (!srcfileloc  "dwarf2out.c" 29554)
+  (!srcfileloc  "dwarf2out.c" 29560)
   nil )
  (!pair  "loc_list_hasher"
   (!type already_seen 1152)
-  (!srcfileloc  "dwarf2out.c" 29554)
+  (!srcfileloc  "dwarf2out.c" 29560)
   nil )
  (!pair  "hash_table<loc_list_hasher>"
   (!type already_seen 1153)
-  (!srcfileloc  "dwarf2out.c" 29554)
+  (!srcfileloc  "dwarf2out.c" 29560)
   nil )
  (!pair  "macinfo_hash_type"
   (!type already_seen 1150)
-  (!srcfileloc  "dwarf2out.c" 26858)
+  (!srcfileloc  "dwarf2out.c" 26864)
   nil )
  (!pair  "macinfo_entry_hasher"
   (!type already_seen 1149)
-  (!srcfileloc  "dwarf2out.c" 26858)
+  (!srcfileloc  "dwarf2out.c" 26864)
   nil )
  (!pair  "hash_table<macinfo_entry_hasher>"
   (!type already_seen 1150)
-  (!srcfileloc  "dwarf2out.c" 26858)
+  (!srcfileloc  "dwarf2out.c" 26864)
   nil )
  (!pair  "external_ref_hash_type"
   (!type already_seen 1143)
@@ -27261,7 +27261,7 @@
   nil )
  (!pair  "__gcc_host_wide_int__"
   (!type already_seen 2)
-  (!srcfileloc  "hwint.h" 76)
+  (!srcfileloc  "hwint.h" 77)
   nil )
  (!pair  "used_type_hasher"
   (!type already_seen 881)
@@ -27924,7 +27924,7 @@
   (!srcfileloc  "gengtype.c" 5185)
   nil )
 )
-(!variables 652
+(!variables 655
  (!pair  "objc_eh_personality_decl"
   (!type already_seen 22)
   (!srcfileloc  "objc/objc-next-runtime-abi-02.c" 3605)
@@ -28632,7 +28632,19 @@
   nil )
  (!pair  "gfc_charlen_type_node"
   (!type already_seen 22)
-  (!srcfileloc  "fortran/trans-types.h" 40)
+  (!srcfileloc  "fortran/trans-types.h" 54)
+  nil )
+ (!pair  "logical_false_node"
+  (!type already_seen 22)
+  (!srcfileloc  "fortran/trans-types.h" 48)
+  nil )
+ (!pair  "logical_true_node"
+  (!type already_seen 22)
+  (!srcfileloc  "fortran/trans-types.h" 47)
+  nil )
+ (!pair  "logical_type_node"
+  (!type already_seen 22)
+  (!srcfileloc  "fortran/trans-types.h" 46)
   nil )
  (!pair  "gfc_complex_float128_type_node"
   (!type already_seen 22)
@@ -28674,63 +28686,63 @@
   (!type array 1845 nil  gc_used "MAX_CHARACTER_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 92)
+  (!srcfileloc  "fortran/trans-types.c" 95)
   nil )
  (!pair  "gfc_character_types"
   (!type array 1846 nil  gc_used "MAX_CHARACTER_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 91)
+  (!srcfileloc  "fortran/trans-types.c" 94)
   nil )
  (!pair  "gfc_complex_types"
   (!type array 1847 nil  gc_used "MAX_REAL_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 87)
+  (!srcfileloc  "fortran/trans-types.c" 90)
   nil )
  (!pair  "gfc_real_types"
   (!type array 1848 nil  gc_used "MAX_REAL_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 86)
+  (!srcfileloc  "fortran/trans-types.c" 89)
   nil )
  (!pair  "gfc_logical_types"
   (!type array 1849 nil  gc_used "MAX_INT_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 82)
+  (!srcfileloc  "fortran/trans-types.c" 85)
   nil )
  (!pair  "gfc_integer_types"
   (!type array 1850 nil  gc_used "MAX_INT_KINDS + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 81)
+  (!srcfileloc  "fortran/trans-types.c" 84)
   nil )
  (!pair  "gfc_array_descriptor_base_caf"
   (!type array 1851 nil  gc_used "2 * (GFC_MAX_DIMENSIONS+1)" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 73)
+  (!srcfileloc  "fortran/trans-types.c" 76)
   nil )
  (!pair  "gfc_array_descriptor_base"
   (!type array 1852 nil  gc_used "2 * (GFC_MAX_DIMENSIONS+1)" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-types.c" 72)
+  (!srcfileloc  "fortran/trans-types.c" 75)
   nil )
  (!pair  "gfc_max_array_element_size"
   (!type already_seen 22)
-  (!srcfileloc  "fortran/trans-types.c" 71)
+  (!srcfileloc  "fortran/trans-types.c" 74)
   nil )
  (!pair  "gfc_desc_dim_type"
   (!type already_seen 22)
-  (!srcfileloc  "fortran/trans-types.c" 70)
+  (!srcfileloc  "fortran/trans-types.c" 73)
   nil )
  (!pair  "select_struct"
   (!type array 1853 nil  gc_used "2" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "fortran/trans-stmt.c" 2724)
+  (!srcfileloc  "fortran/trans-stmt.c" 2731)
   nil )
  (!pair  "dt_parm"
   (!type already_seen 22)
@@ -28762,7 +28774,7 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 1772)
-  (!srcfileloc  "fortran/trans-decl.c" 4644)
+  (!srcfileloc  "fortran/trans-decl.c" 4647)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 22)
@@ -28813,7 +28825,7 @@
  )
  (!pair  "cv_cache"
   (!type already_seen 412)
-  (!srcfileloc  "cp/constexpr.c" 4861)
+  (!srcfileloc  "cp/constexpr.c" 4902)
   (!options 
    (!option deletable string  "")
   )
@@ -28882,11 +28894,11 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.c" 38763)
+  (!srcfileloc  "cp/parser.c" 38768)
   nil )
  (!pair  "the_parser"
   (!type already_seen 1727)
-  (!srcfileloc  "cp/parser.c" 38024)
+  (!srcfileloc  "cp/parser.c" 38030)
   nil )
  (!pair  "lambda_scope_stack"
   (!type already_seen 1735)
@@ -28929,31 +28941,31 @@
   nil )
  (!pair  "subsumption_table"
   (!type already_seen 1694)
-  (!srcfileloc  "cp/pt.c" 26169)
+  (!srcfileloc  "cp/pt.c" 26185)
   nil )
  (!pair  "concept_expansions"
   (!type already_seen 1690)
-  (!srcfileloc  "cp/pt.c" 26082)
+  (!srcfileloc  "cp/pt.c" 26098)
   nil )
  (!pair  "concept_memos"
   (!type already_seen 1690)
-  (!srcfileloc  "cp/pt.c" 26027)
+  (!srcfileloc  "cp/pt.c" 26043)
   nil )
  (!pair  "constraint_memos"
   (!type already_seen 1688)
-  (!srcfileloc  "cp/pt.c" 26026)
+  (!srcfileloc  "cp/pt.c" 26042)
   nil )
  (!pair  "decl_constraints"
   (!type already_seen 1682)
-  (!srcfileloc  "cp/pt.c" 25914)
+  (!srcfileloc  "cp/pt.c" 25930)
   nil )
  (!pair  "last_error_tinst_level"
   (!type already_seen 1624)
-  (!srcfileloc  "cp/pt.c" 9550)
+  (!srcfileloc  "cp/pt.c" 9563)
   nil )
  (!pair  "defaulted_ttp_cache"
   (!type already_seen 412)
-  (!srcfileloc  "cp/pt.c" 7006)
+  (!srcfileloc  "cp/pt.c" 7019)
   (!options 
    (!option deletable string  "")
   )
@@ -28992,19 +29004,19 @@
   nil )
  (!pair  "ssdf_decls"
   (!type already_seen 85)
-  (!srcfileloc  "cp/decl2.c" 3446)
+  (!srcfileloc  "cp/decl2.c" 3455)
   nil )
  (!pair  "ssdf_decl"
   (!type already_seen 22)
-  (!srcfileloc  "cp/decl2.c" 3442)
+  (!srcfileloc  "cp/decl2.c" 3451)
   nil )
  (!pair  "priority_decl"
   (!type already_seen 22)
-  (!srcfileloc  "cp/decl2.c" 3439)
+  (!srcfileloc  "cp/decl2.c" 3448)
   nil )
  (!pair  "initialize_p_decl"
   (!type already_seen 22)
-  (!srcfileloc  "cp/decl2.c" 3436)
+  (!srcfileloc  "cp/decl2.c" 3445)
   nil )
  (!pair  "mangling_aliases"
   (!type already_seen 85)
@@ -29024,7 +29036,7 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.c" 7829)
+  (!srcfileloc  "cp/decl.c" 7866)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 412)
@@ -29044,7 +29056,7 @@
   nil )
  (!pair  "unemitted_tinfo_decls"
   (!type already_seen 85)
-  (!srcfileloc  "cp/cp-tree.h" 6298)
+  (!srcfileloc  "cp/cp-tree.h" 6299)
   nil )
  (!pair  "assignment_operator_name_info"
   (!type array 1858 nil  gc_used "(int) MAX_TREE_CODES" 
@@ -29138,11 +29150,11 @@
   nil )
  (!pair  "temp_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/mangle.c" 4366)
+  (!srcfileloc  "cp/mangle.c" 4421)
   nil )
  (!pair  "conv_type_names"
   (!type already_seen 1627)
-  (!srcfileloc  "cp/mangle.c" 4194)
+  (!srcfileloc  "cp/mangle.c" 4249)
   nil )
  (!pair  "subst_identifiers"
   (!type array 1861 nil  gc_used "SUBID_MAX" 
@@ -29223,7 +29235,7 @@
  )
  (!pair  "tree_vector_cache"
   (!type already_seen 1585)
-  (!srcfileloc  "c-family/c-common.c" 7510)
+  (!srcfileloc  "c-family/c-common.c" 7511)
   (!options 
    (!option deletable string  "")
   )
@@ -29344,17 +29356,17 @@
   (!type array 1867 nil  gc_used "(int) ATTR_LAST" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5852)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5871)
   nil )
  (!pair  "builtin_types"
   (!type array 1868 nil  gc_used "(int) BT_LAST + 1" 
    (!type already_seen 22)
   )
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5686)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5705)
   nil )
  (!pair  "dummy_global"
   (!type already_seen 22)
-  (!srcfileloc  "ada/gcc-interface/utils.c" 5465)
+  (!srcfileloc  "ada/gcc-interface/utils.c" 5484)
   nil )
  (!pair  "pad_type_hash_table"
   (!type already_seen 1559)
@@ -29638,11 +29650,11 @@
  )
  (!pair  "va_list_type"
   (!type already_seen 22)
-  (!srcfileloc  "config/aarch64/aarch64.c" 10398)
+  (!srcfileloc  "config/aarch64/aarch64.c" 10392)
   nil )
  (!pair  "aarch64_previous_fndecl"
   (!type already_seen 22)
-  (!srcfileloc  "config/aarch64/aarch64.c" 9453)
+  (!srcfileloc  "config/aarch64/aarch64.c" 9447)
   nil )
  (!pair  "tls_get_addr_libfunc"
   (!type already_seen 128)
@@ -29793,26 +29805,26 @@
   nil )
  (!pair  "elf_fini_array_section"
   (!type already_seen 238)
-  (!srcfileloc  "varasm.c" 7805)
+  (!srcfileloc  "varasm.c" 7806)
   nil )
  (!pair  "elf_init_array_section"
   (!type already_seen 238)
-  (!srcfileloc  "varasm.c" 7804)
+  (!srcfileloc  "varasm.c" 7805)
   nil )
  (!pair  "tm_clone_hash"
   (!type already_seen 1308)
-  (!srcfileloc  "varasm.c" 5858)
+  (!srcfileloc  "varasm.c" 5859)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "weakref_targets"
   (!type already_seen 22)
-  (!srcfileloc  "varasm.c" 5529)
+  (!srcfileloc  "varasm.c" 5530)
   nil )
  (!pair  "const_desc_htab"
   (!type already_seen 1303)
-  (!srcfileloc  "varasm.c" 2895)
+  (!srcfileloc  "varasm.c" 2896)
   nil )
  (!pair  "initial_trampoline"
   (!type already_seen 128)
