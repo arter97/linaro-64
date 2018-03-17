@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2018-01-15" "gcc-7.2.1" "GNU"
+.TH GCC 1 "2018-03-14" "gcc-7.3.1" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -1221,7 +1221,9 @@ See \s-1RS/6000\s0 and PowerPC Options.
 \&\fB\-msse2avx  \-mfentry  \-mrecord\-mcount  \-mnop\-mcount  \-m8bit\-idiv 
 \&\-mavx256\-split\-unaligned\-load  \-mavx256\-split\-unaligned\-store 
 \&\-malign\-data=\fR\fItype\fR  \fB\-mstack\-protector\-guard=\fR\fIguard\fR 
-\&\fB\-mmitigate\-rop  \-mgeneral\-regs\-only\fR
+\&\fB\-mmitigate\-rop  \-mgeneral\-regs\-only 
+\&\-mindirect\-branch=\fR\fIchoice\fR \fB\-mfunction\-return=\fR\fIchoice\fR 
+\&\fB\-mindirect\-branch\-register\fR
 .Sp
 \&\fIx86 Windows Options\fR
 \&\fB\-mconsole  \-mcygwin  \-mno\-cygwin  \-mdll 
@@ -7499,7 +7501,7 @@ This flag is enabled by default at \fB\-O2\fR and higher and depends on
 \&\fB\-fdelete\-null\-pointer\-checks\fR also being enabled.
 .IP "\fB\-fisolate\-erroneous\-paths\-attribute\fR" 4
 .IX Item "-fisolate-erroneous-paths-attribute"
-Detect paths that trigger erroneous or undefined behavior due a null value
+Detect paths that trigger erroneous or undefined behavior due to a null value
 being used in a way forbidden by a \f(CW\*(C`returns_nonnull\*(C'\fR or \f(CW\*(C`nonnull\*(C'\fR
 attribute.  Isolate those paths from the main control flow and turn the
 statement with erroneous or undefined behavior into a trap.  This is not
@@ -8022,6 +8024,7 @@ Some assemblers only support this flag when \fIn\fR is a power of two;
 in that case, it is rounded up.
 .Sp
 If \fIn\fR is not specified or is zero, use a machine-dependent default.
+The maximum allowed \fIn\fR option value is 65536.
 .Sp
 Enabled at levels \fB\-O2\fR, \fB\-O3\fR.
 .IP "\fB\-flimit\-function\-alignment\fR" 4
@@ -8049,6 +8052,7 @@ are greater than this value, then their values are used instead.
 .Sp
 If \fIn\fR is not specified or is zero, use a machine-dependent default
 which is very likely to be \fB1\fR, meaning no alignment.
+The maximum allowed \fIn\fR option value is 65536.
 .Sp
 Enabled at levels \fB\-O2\fR, \fB\-O3\fR.
 .IP "\fB\-falign\-loops\fR" 4
@@ -8064,6 +8068,7 @@ operations.
 .Sp
 \&\fB\-fno\-align\-loops\fR and \fB\-falign\-loops=1\fR are
 equivalent and mean that loops are not aligned.
+The maximum allowed \fIn\fR option value is 65536.
 .Sp
 If \fIn\fR is not specified or is zero, use a machine-dependent default.
 .Sp
@@ -8083,6 +8088,7 @@ need be executed.
 equivalent and mean that loops are not aligned.
 .Sp
 If \fIn\fR is not specified or is zero, use a machine-dependent default.
+The maximum allowed \fIn\fR option value is 65536.
 .Sp
 Enabled at levels \fB\-O2\fR, \fB\-O3\fR.
 .IP "\fB\-funit\-at\-a\-time\fR" 4
@@ -13572,6 +13578,9 @@ Enable \s-1FP16\s0 extension.  This also enables floating-point instructions.
 Enable the RcPc extension.  This does not change code generation from \s-1GCC,\s0
 but is passed on to the assembler, enabling inline asm statements to use
 instructions from the RcPc extension.
+.IP "\fBdotprod\fR" 4
+.IX Item "dotprod"
+Enable the Dot Product extension.  This also enables Advanced \s-1SIMD\s0 instructions.
 .PP
 Feature \fBcrypto\fR implies \fBsimd\fR, which implies \fBfp\fR.
 Conversely, \fBnofp\fR implies \fBnosimd\fR, which implies
@@ -14462,6 +14471,15 @@ architecture.  This also enables the features provided by
 \&\fB\-march=armv8.2\-a+fp16\fR enables compiler support for the
 ARMv8.2\-A architecture with the optional \s-1FP16\s0 instructions extension.
 This also enables the features provided by \fB\-march=armv8.1\-a\fR
+and implies \fB\-mfp16\-format=ieee\fR.
+.Sp
+\&\fB\-march=armv8.2\-a+dotprod\fR enables compiler support for the
+ARMv8.2\-A architecture with the optional Dot Product instructions extension.
+This also enables the features provided by \fB\-march=armv8.1\-a\fR.
+.Sp
+\&\fB\-march=armv8.2\-a+fp16+dotprod\fR enables compiler support for the
+ARMv8.2\-A architecture with the optional \s-1FP16\s0 and Dot Product instructions
+extension.  This also enables the features provided by \fB\-march=armv8.1\-a\fR
 and implies \fB\-mfp16\-format=ieee\fR.
 .Sp
 \&\fB\-march=native\fR causes the compiler to auto-detect the architecture
@@ -24085,8 +24103,8 @@ preferred alignment to \fB\-mpreferred\-stack\-boundary=2\fR.
 .IX Item "-maes"
 .IP "\fB\-mpclmul\fR" 4
 .IX Item "-mpclmul"
-.IP "\fB\-mclfushopt\fR" 4
-.IX Item "-mclfushopt"
+.IP "\fB\-mclflushopt\fR" 4
+.IX Item "-mclflushopt"
 .IP "\fB\-mfsgsbase\fR" 4
 .IX Item "-mfsgsbase"
 .IP "\fB\-mrdrnd\fR" 4
@@ -24657,6 +24675,38 @@ on to provide serious protection.
 Generate code that uses only the general-purpose registers.  This
 prevents the compiler from using floating-point, vector, mask and bound
 registers.
+.IP "\fB\-mindirect\-branch=\fR\fIchoice\fR" 4
+.IX Item "-mindirect-branch=choice"
+Convert indirect call and jump with \fIchoice\fR.  The default is
+\&\fBkeep\fR, which keeps indirect call and jump unmodified.
+\&\fBthunk\fR converts indirect call and jump to call and return thunk.
+\&\fBthunk-inline\fR converts indirect call and jump to inlined call
+and return thunk.  \fBthunk-extern\fR converts indirect call and jump
+to external call and return thunk provided in a separate object file.
+You can control this behavior for a specific function by using the
+function attribute \f(CW\*(C`indirect_branch\*(C'\fR.
+.Sp
+Note that \fB\-mcmodel=large\fR is incompatible with
+\&\fB\-mindirect\-branch=thunk\fR nor
+\&\fB\-mindirect\-branch=thunk\-extern\fR since the thunk function may
+not be reachable in large code model.
+.IP "\fB\-mfunction\-return=\fR\fIchoice\fR" 4
+.IX Item "-mfunction-return=choice"
+Convert function return with \fIchoice\fR.  The default is \fBkeep\fR,
+which keeps function return unmodified.  \fBthunk\fR converts function
+return to call and return thunk.  \fBthunk-inline\fR converts function
+return to inlined call and return thunk.  \fBthunk-extern\fR converts
+function return to external call and return thunk provided in a separate
+object file.  You can control this behavior for a specific function by
+using the function attribute \f(CW\*(C`function_return\*(C'\fR.
+.Sp
+Note that \fB\-mcmodel=large\fR is incompatible with
+\&\fB\-mfunction\-return=thunk\fR nor
+\&\fB\-mfunction\-return=thunk\-extern\fR since the thunk function may
+not be reachable in large code model.
+.IP "\fB\-mindirect\-branch\-register\fR" 4
+.IX Item "-mindirect-branch-register"
+Force indirect call and jump via register.
 .PP
 These \fB\-m\fR switches are supported in addition to the above
 on x86\-64 processors in 64\-bit environments.
