@@ -1,7 +1,7 @@
 This is libgomp.info, produced by makeinfo version 6.1 from
 libgomp.texi.
 
-Copyright (C) 2006-2017 Free Software Foundation, Inc.
+Copyright (C) 2006-2018 Free Software Foundation, Inc.
 
    Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -33,7 +33,7 @@ C/C++ and Fortran.
    Published by the Free Software Foundation 51 Franklin Street, Fifth
 Floor Boston, MA 02110-1301 USA
 
-   Copyright (C) 2006-2017 Free Software Foundation, Inc.
+   Copyright (C) 2006-2018 Free Software Foundation, Inc.
 
    Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -64,7 +64,7 @@ Processing Runtime Library.  This includes the GNU implementation of the
 OpenMP (http://www.openmp.org) Application Programming Interface (API)
 for multi-platform shared-memory parallel programming in C/C++ and
 Fortran, and the GNU implementation of the OpenACC
-(http://www.openacc.org/) Application Programming Interface (API) for
+(https://www.openacc.org) Application Programming Interface (API) for
 offloading of code to accelerator devices in C/C++ and Fortran.
 
    Originally, libgomp implemented the GNU OpenMP Runtime Library.
@@ -1624,7 +1624,7 @@ automatic linking of the OpenACC runtime library (*note OpenACC Runtime
 Library Routines::).
 
    A complete description of all OpenACC directives accepted may be
-found in the OpenACC (http://www.openacc.org/) Application Programming
+found in the OpenACC (https://www.openacc.org) Application Programming
 Interface manual, version 2.0.
 
    Note that this is an experimental feature and subject to change in
@@ -1719,7 +1719,7 @@ _Fortran_:
                     'integer(kind=acc_device_kind) devicetype'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.1.
 
 
@@ -1741,7 +1741,7 @@ _Fortran_:
                     'integer(kind=acc_device_kind) devicetype'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.2.
 
 
@@ -1762,7 +1762,7 @@ _Fortran_:
                     'integer(kind=acc_device_kind) acc_get_device_type'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.3.
 
 
@@ -1785,7 +1785,7 @@ _Fortran_:
                     'integer(kind=acc_device_kind) devicetype'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.4.
 
 
@@ -1808,7 +1808,7 @@ _Fortran_:
                     'integer acc_get_device_num'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.5.
 
 
@@ -1833,7 +1833,7 @@ _Fortran_:
                     'logical acc_async_test'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.6.
 
 
@@ -1857,7 +1857,7 @@ _Fortran_:
                     'logical acc_get_device_num'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.7.
 
 
@@ -1872,13 +1872,20 @@ _Description_
 
 _C/C++_:
      _Prototype_:   'acc_wait(arg);'
+     _Prototype     'acc_async_wait(arg);'
+     (OpenACC 1.0
+     compatibility)_:
 
 _Fortran_:
      _Interface_:   'subroutine acc_wait(arg)'
                     'integer(acc_handle_kind) arg'
+     _Interface     'subroutine acc_async_wait(arg)'
+     (OpenACC 1.0
+     compatibility)_:
+                    'integer(acc_handle_kind) arg'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.8.
 
 
@@ -1893,12 +1900,18 @@ _Description_
 
 _C/C++_:
      _Prototype_:   'acc_wait_all(void);'
+     _Prototype     'acc_async_wait_all(void);'
+     (OpenACC 1.0
+     compatibility)_:
 
 _Fortran_:
-     _Interface_:   'subroutine acc_wait_async()'
+     _Interface_:   'subroutine acc_wait_all()'
+     _Interface     'subroutine acc_async_wait_all()'
+     (OpenACC 1.0
+     compatibility)_:
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.10.
 
 
@@ -1920,7 +1933,7 @@ _Fortran_:
                     'integer(acc_handle_kind) async'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.11.
 
 
@@ -1941,7 +1954,7 @@ _Fortran_:
                     'integer(acc_handle_kind) arg, async'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.9.
 
 
@@ -1962,7 +1975,7 @@ _Fortran_:
                     'integer(acc_device_kind) devicetype'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.12.
 
 
@@ -1983,7 +1996,7 @@ _Fortran_:
                     'integer(acc_device_kind) devicetype'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.13.
 
 
@@ -2009,7 +2022,7 @@ _Fortran_:
                     'logical acc_on_device'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.14.
 
 
@@ -2026,7 +2039,7 @@ _C/C++_:
      _Prototype_:   'd_void* acc_malloc(size_t len);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.15.
 
 
@@ -2042,7 +2055,7 @@ _C/C++_:
      _Prototype_:   'acc_free(d_void *a);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.16.
 
 
@@ -2071,7 +2084,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.17.
 
 
@@ -2107,7 +2120,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.18.
 
 
@@ -2137,7 +2150,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.19.
 
 
@@ -2173,7 +2186,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.20.
 
 
@@ -2201,7 +2214,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.21.
 
 
@@ -2229,7 +2242,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.22.
 
 
@@ -2258,7 +2271,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.23.
 
 
@@ -2287,7 +2300,7 @@ _Fortran_:
                     'integer len'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.24.
 
 
@@ -2305,7 +2318,7 @@ _C/C++_:
      _Prototype_:   'acc_map_data(h_void *h, d_void *d, size_t len);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.25.
 
 
@@ -2322,7 +2335,7 @@ _C/C++_:
      _Prototype_:   'acc_unmap_data(h_void *h);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.26.
 
 
@@ -2339,7 +2352,7 @@ _C/C++_:
      _Prototype_:   'void *acc_deviceptr(h_void *h);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.27.
 
 
@@ -2356,7 +2369,7 @@ _C/C++_:
      _Prototype_:   'void *acc_hostptr(d_void *d);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.28.
 
 
@@ -2392,7 +2405,7 @@ _Fortran_:
                     'logical acc_is_present'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.29.
 
 
@@ -2411,7 +2424,7 @@ _C/C++_:
                     bytes);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.30.
 
 
@@ -2430,7 +2443,7 @@ _C/C++_:
                     size_t bytes);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      3.2.31.
 
 
@@ -2447,7 +2460,7 @@ _C/C++_:
      _Prototype_:   'void *acc_get_current_cuda_device(void);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      A.2.1.1.
 
 
@@ -2464,7 +2477,7 @@ _C/C++_:
      _Prototype_:   'acc_get_current_cuda_context(void);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      A.2.1.2.
 
 
@@ -2481,7 +2494,7 @@ _C/C++_:
      _Prototype_:   'acc_get_cuda_stream(void);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      A.2.1.3.
 
 
@@ -2498,7 +2511,7 @@ _C/C++_:
      _Prototype_:   'acc_set_cuda_stream(int async void *stream);'
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section
+     OpenACC specification v2.0 (https://www.openacc.org), section
      A.2.1.4.
 
 
@@ -2524,7 +2537,7 @@ File: libgomp.info,  Node: ACC_DEVICE_TYPE,  Next: ACC_DEVICE_NUM,  Up: OpenACC 
 =====================
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section 4.1.
+     OpenACC specification v2.0 (https://www.openacc.org), section 4.1.
 
 
 File: libgomp.info,  Node: ACC_DEVICE_NUM,  Next: GCC_ACC_NOTIFY,  Prev: ACC_DEVICE_TYPE,  Up: OpenACC Environment Variables
@@ -2533,7 +2546,7 @@ File: libgomp.info,  Node: ACC_DEVICE_NUM,  Next: GCC_ACC_NOTIFY,  Prev: ACC_DEV
 ====================
 
 _Reference_:
-     OpenACC specification v2.0 (http://www.openacc.org/), section 4.2.
+     OpenACC specification v2.0 (https://www.openacc.org), section 4.2.
 
 
 File: libgomp.info,  Node: GCC_ACC_NOTIFY,  Prev: ACC_DEVICE_NUM,  Up: OpenACC Environment Variables
@@ -2748,7 +2761,7 @@ additional information on library interoperability.
 
    (2) More complete information about 'ACC_DEVICE_TYPE' and
 'ACC_DEVICE_NUM' can be found in sections 4.1 and 4.2 of the OpenACC
-(http://www.openacc.org/) Application Programming Interface”, Version
+(https://www.openacc.org) Application Programming Interface”, Version
 2.0.
 
 
@@ -4495,62 +4508,62 @@ Node: acc_get_device_num67828
 Node: acc_async_test68625
 Node: acc_async_test_all69617
 Node: acc_wait70517
-Node: acc_wait_all71152
-Node: acc_wait_all_async71731
-Node: acc_wait_async72483
-Node: acc_init73190
-Node: acc_shutdown73836
-Node: acc_on_device74504
-Node: acc_malloc75508
-Node: acc_free76007
-Node: acc_copyin76434
-Node: acc_present_or_copyin77544
-Node: acc_create79170
-Node: acc_present_or_create80325
-Node: acc_copyout81959
-Node: acc_delete82982
-Node: acc_update_device83957
-Node: acc_update_self85069
-Node: acc_map_data86173
-Node: acc_unmap_data86858
-Node: acc_deviceptr87379
-Node: acc_hostptr87949
-Node: acc_is_present88513
-Node: acc_memcpy_to_device90040
-Node: acc_memcpy_from_device90703
-Node: acc_get_current_cuda_device91387
-Node: acc_get_current_cuda_context91984
-Node: acc_get_cuda_stream92578
-Node: acc_set_cuda_stream93134
-Node: OpenACC Environment Variables93666
-Node: ACC_DEVICE_TYPE94125
-Node: ACC_DEVICE_NUM94361
-Node: GCC_ACC_NOTIFY94618
-Node: CUDA Streams Usage94841
-Ref: CUDA Streams Usage-Footnote-196741
-Node: OpenACC Library Interoperability96850
-Ref: OpenACC Library Interoperability-Footnote-1103206
-Ref: OpenACC Library Interoperability-Footnote-2103458
-Node: The libgomp ABI103666
-Node: Implementing MASTER construct104522
-Node: Implementing CRITICAL construct104936
-Node: Implementing ATOMIC construct105675
-Node: Implementing FLUSH construct106156
-Node: Implementing BARRIER construct106427
-Node: Implementing THREADPRIVATE construct106696
-Node: Implementing PRIVATE clause107349
-Node: Implementing FIRSTPRIVATE LASTPRIVATE COPYIN and COPYPRIVATE clauses107930
-Node: Implementing REDUCTION clause109254
-Node: Implementing PARALLEL construct109811
-Node: Implementing FOR construct111068
-Node: Implementing ORDERED construct113066
-Node: Implementing SECTIONS construct113372
-Node: Implementing SINGLE construct114138
-Node: Implementing OpenACC's PARALLEL construct114850
-Node: Reporting Bugs115108
-Node: Copying115470
-Node: GNU Free Documentation License153017
-Node: Funding178140
-Node: Library Index180666
+Node: acc_wait_all71379
+Node: acc_wait_all_async72138
+Node: acc_wait_async72890
+Node: acc_init73597
+Node: acc_shutdown74243
+Node: acc_on_device74911
+Node: acc_malloc75915
+Node: acc_free76414
+Node: acc_copyin76841
+Node: acc_present_or_copyin77951
+Node: acc_create79577
+Node: acc_present_or_create80732
+Node: acc_copyout82366
+Node: acc_delete83389
+Node: acc_update_device84364
+Node: acc_update_self85476
+Node: acc_map_data86580
+Node: acc_unmap_data87265
+Node: acc_deviceptr87786
+Node: acc_hostptr88356
+Node: acc_is_present88920
+Node: acc_memcpy_to_device90447
+Node: acc_memcpy_from_device91110
+Node: acc_get_current_cuda_device91794
+Node: acc_get_current_cuda_context92391
+Node: acc_get_cuda_stream92985
+Node: acc_set_cuda_stream93541
+Node: OpenACC Environment Variables94073
+Node: ACC_DEVICE_TYPE94532
+Node: ACC_DEVICE_NUM94768
+Node: GCC_ACC_NOTIFY95025
+Node: CUDA Streams Usage95248
+Ref: CUDA Streams Usage-Footnote-197148
+Node: OpenACC Library Interoperability97257
+Ref: OpenACC Library Interoperability-Footnote-1103613
+Ref: OpenACC Library Interoperability-Footnote-2103865
+Node: The libgomp ABI104073
+Node: Implementing MASTER construct104929
+Node: Implementing CRITICAL construct105343
+Node: Implementing ATOMIC construct106082
+Node: Implementing FLUSH construct106563
+Node: Implementing BARRIER construct106834
+Node: Implementing THREADPRIVATE construct107103
+Node: Implementing PRIVATE clause107756
+Node: Implementing FIRSTPRIVATE LASTPRIVATE COPYIN and COPYPRIVATE clauses108337
+Node: Implementing REDUCTION clause109661
+Node: Implementing PARALLEL construct110218
+Node: Implementing FOR construct111475
+Node: Implementing ORDERED construct113473
+Node: Implementing SECTIONS construct113779
+Node: Implementing SINGLE construct114545
+Node: Implementing OpenACC's PARALLEL construct115257
+Node: Reporting Bugs115515
+Node: Copying115877
+Node: GNU Free Documentation License153424
+Node: Funding178547
+Node: Library Index181073
 
 End Tag Table
