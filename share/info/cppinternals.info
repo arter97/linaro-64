@@ -1,4 +1,4 @@
-This is cppinternals.info, produced by makeinfo version 6.1 from
+This is cppinternals.info, produced by makeinfo version 6.5 from
 cppinternals.texi.
 
 INFO-DIR-SECTION Software development
@@ -28,6 +28,18 @@ File: cppinternals.info,  Node: Top,  Next: Conventions,  Up: (dir)
 
 The GNU C Preprocessor Internals
 ********************************
+
+* Menu:
+
+* Conventions::
+* Lexer::
+* Hash Nodes::
+* Macro Expansion::
+* Token Spacing::
+* Line Numbering::
+* Guard Macros::
+* Files::
+* Concept Index::
 
 1 Cpplib--the GNU C Preprocessor
 ********************************
@@ -1014,16 +1026,16 @@ Concept Index
 
 Tag Table:
 Node: Top905
-Node: Conventions2590
-Node: Lexer3532
-Ref: Invalid identifiers11446
-Ref: Lexing a line13396
-Node: Hash Nodes18165
-Node: Macro Expansion21044
-Node: Token Spacing29988
-Node: Line Numbering35844
-Node: Guard Macros39929
-Node: Files44720
-Node: Concept Index48186
+Node: Conventions2743
+Node: Lexer3685
+Ref: Invalid identifiers11599
+Ref: Lexing a line13549
+Node: Hash Nodes18318
+Node: Macro Expansion21197
+Node: Token Spacing30141
+Node: Line Numbering35997
+Node: Guard Macros40082
+Node: Files44873
+Node: Concept Index48339
 
 End Tag Table
