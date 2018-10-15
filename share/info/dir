@@ -5,7 +5,7 @@ The first time you invoke Info you start off looking at this node.
 File: dir,	Node: Top	This is the top of the INFO tree
 
   This (the Directory node) gives a menu of major topics.
-  Typing "q" exits, "H" lists all Info commands, "d" returns here,
+  Typing "q" exits, "?" lists all Info commands, "d" returns here,
   "h" gives a primer for first-timers,
   "mEmacs<Return>" visits the Emacs manual, etc.
 
@@ -17,6 +17,7 @@ File: dir,	Node: Top	This is the top of the INFO tree
 GNU Libraries
 * libgomp: (libgomp).           GNU Offloading and Multi Processing Runtime 
                                   Library.
+* libitm: (libitm).             GNU Transactional Memory Library
 
 Individual utilities
 * addr2line: (binutils)addr2line.               Convert addresses to file and 
@@ -65,10 +66,11 @@ Software development
 * gcc: (gcc).                   The GNU Compiler Collection.
 * gccinstall: (gccinstall).     Installing the GNU Compiler Collection.
 * gccint: (gccint).             Internals of the GNU Compiler Collection.
-* gcov: (gcc) Gcov.             'gcov'--a test coverage program.
-* gcov-dump: (gcc) Gcov-dump.   'gcov-dump'--an offline gcda and gcno profile 
+* gcov: (gcc) Gcov.             `gcov'--a test coverage program.
+* gcov-dump: (gcc) Gcov-dump.   `gcov-dump'--an offline gcda and gcno profile 
                                   dump tool.
-* gcov-tool: (gcc) Gcov-tool.   'gcov-tool'--an offline gcda profile 
+* gcov-tool: (gcc) Gcov-tool.   `gcov-tool'--an offline gcda profile 
                                   processing program.
 * gdbserver: (gdb) Server.      The GNU debugging server.
+* gfortran: (gfortran).         The GNU Fortran Compiler.
 * gprof: (gprof).               Profiling your program's execution
