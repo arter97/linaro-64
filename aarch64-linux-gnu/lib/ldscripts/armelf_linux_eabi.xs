@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("=/aarch64-linux-gnu/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
+SEARCH_DIR("=/home/arter97/linaro-64/aarch64-linux-gnu/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
@@ -107,7 +107,10 @@ SECTIONS
   .gcc_except_table   : ONLY_IF_RW { *(.gcc_except_table .gcc_except_table.*) }
   .exception_ranges   : ONLY_IF_RW { *(.exception_ranges .exception_ranges*) }
   /* Thread Local Storage sections  */
-  .tdata	  : { *(.tdata .tdata.* .gnu.linkonce.td.*) }
+  .tdata	  :
+   {
+     *(.tdata .tdata.* .gnu.linkonce.td.*)
+   }
   .tbss		  : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
   .preinit_array     :
   {
@@ -164,10 +167,10 @@ SECTIONS
     SORT(CONSTRUCTORS)
   }
   .data1          : { *(.data1) }
-  _edata = .; PROVIDE (edata = .);
+  PROVIDE (_edata = .); PROVIDE (edata = .);
   . = .;
-  __bss_start = .;
-  __bss_start__ = .;
+  PROVIDE (__bss_start = .);
+  PROVIDE (__bss_start__ = .);
   .bss            :
   {
    *(.dynbss)
@@ -180,12 +183,12 @@ SECTIONS
       pad the .data section.  */
    . = ALIGN(. != 0 ? 32 / 8 : 1);
   }
-  _bss_end__ = . ; __bss_end__ = . ;
+  PROVIDE (_bss_end__ = .); PROVIDE (__bss_end__ = .);
   . = ALIGN(32 / 8);
   . = SEGMENT_START("ldata-segment", .);
   . = ALIGN(32 / 8);
-  __end__ = . ;
-  _end = .; PROVIDE (end = .);
+  PROVIDE (__end__ = .);
+  PROVIDE (_end = .); PROVIDE (end = .);
   . = DATA_SEGMENT_END (.);
   /* Stabs debugging sections.  */
   .stab          0 : { *(.stab) }
