@@ -1,11 +1,11 @@
 /* Generated at libc build time from syscall list.  */
-/* The system call list corresponds to kernel 4.17.  */
+/* The system call list corresponds to kernel 4.19.  */
 
 #ifndef _SYSCALL_H
 # error "Never use <bits/syscall.h> directly; include <sys/syscall.h> instead."
 #endif
 
-#define __GLIBC_LINUX_VERSION_CODE 266496
+#define __GLIBC_LINUX_VERSION_CODE 267008
 
 #ifdef __NR_FAST_atomic_update
 # define SYS_FAST_atomic_update __NR_FAST_atomic_update
@@ -649,6 +649,10 @@
 
 #ifdef __NR_io_getevents
 # define SYS_io_getevents __NR_io_getevents
+#endif
+
+#ifdef __NR_io_pgetevents
+# define SYS_io_pgetevents __NR_io_pgetevents
 #endif
 
 #ifdef __NR_io_setup
@@ -1629,6 +1633,10 @@
 
 #ifdef __NR_rmdir
 # define SYS_rmdir __NR_rmdir
+#endif
+
+#ifdef __NR_rseq
+# define SYS_rseq __NR_rseq
 #endif
 
 #ifdef __NR_rt_sigaction

@@ -30,10 +30,10 @@ struct bkey {
 	BITMASK(name, struct bkey, field, offset, size)
 
 #define PTR_FIELD(name, offset, size)					\
-static __inline__ __u64 name(const struct bkey *k, unsigned i)		\
+static __inline__ __u64 name(const struct bkey *k, unsigned int i)		\
 { return (k->ptr[i] >> offset) & ~(~0ULL << size); }			\
 									\
-static __inline__ void SET_##name(struct bkey *k, unsigned i, __u64 v)	\
+static __inline__ void SET_##name(struct bkey *k, unsigned int i, __u64 v)	\
 {									\
 	k->ptr[i] &= ~(~(~0ULL << size) << offset);			\
 	k->ptr[i] |= (v & ~(~0ULL << size)) << offset;			\
@@ -117,12 +117,14 @@ static __inline__ void bkey_copy_key(struct bkey *dest, const struct bkey *src)
 static __inline__ struct bkey *bkey_next(const struct bkey *k)
 {
 	__u64 *d = (void *) k;
+
 	return (struct bkey *) (d + bkey_u64s(k));
 }
 
-static __inline__ struct bkey *bkey_idx(const struct bkey *k, unsigned nr_keys)
+static __inline__ struct bkey *bkey_idx(const struct bkey *k, unsigned int nr_keys)
 {
 	__u64 *d = (void *) k;
+
 	return (struct bkey *) (d + nr_keys);
 }
 /* Enough for a key with 6 pointers */

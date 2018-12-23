@@ -21,7 +21,7 @@ eval "exec /usr/bin/perl -S $0 $@"
 # <http://www.gnu.org/licenses/>.
 
 $VERSION = "2.28";
-$PKGVERSION = "(GNU Toolchain for the A-profile Architecture 8.2-2018-08 (arm-rel-8.23)) ";
+$PKGVERSION = "(GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26)) ";
 $REPORT_BUGS_TO = '<http://www.gnu.org/software/libc/bugs.html>';
 $progname = $0;
 
