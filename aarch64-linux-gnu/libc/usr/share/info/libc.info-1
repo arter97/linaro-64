@@ -1,5 +1,5 @@
 This is
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
 produced by makeinfo version 4.13 from libc.texinfo.
 
 INFO-DIR-SECTION Software libraries
@@ -2060,8 +2060,8 @@ END-INFO-DIR-ENTRY
    This file documents the GNU C Library.
 
    This is `The GNU C Library Reference Manual', for version 2.28
-(GNU Toolchain for the A-profile Architecture 8.2-2018.11
-(arm-rel-8.26)).
+(GNU Toolchain for the A-profile Architecture 8.2-2019.01
+(arm-rel-8.28)).
 
    Copyright (C) 1993-2018 Free Software Foundation, Inc.
 
@@ -2085,8 +2085,8 @@ Main Menu
 *********
 
 This is `The GNU C Library Reference Manual', for Version 2.28
-(GNU Toolchain for the A-profile Architecture 8.2-2018.11
-(arm-rel-8.26)) of the GNU C Library.
+(GNU Toolchain for the A-profile Architecture 8.2-2019.01
+(arm-rel-8.28)) of the GNU C Library.
 
 * Menu:
 

@@ -1,5 +1,5 @@
 This is
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
 produced by makeinfo version 4.13 from libc.texinfo.
 
 INFO-DIR-SECTION Software libraries
@@ -2060,8 +2060,8 @@ END-INFO-DIR-ENTRY
    This file documents the GNU C Library.
 
    This is `The GNU C Library Reference Manual', for version 2.28
-(GNU Toolchain for the A-profile Architecture 8.2-2018.11
-(arm-rel-8.26)).
+(GNU Toolchain for the A-profile Architecture 8.2-2019.01
+(arm-rel-8.28)).
 
    Copyright (C) 1993-2018 Free Software Foundation, Inc.
 
@@ -5850,7 +5850,7 @@ clog10        3 + i 2         3 + i 2         3 + i 2         0 + i 1         -
 clog10l       2 + i 2         -               2 + i 2         -               -
 clog10f128    -               -               -               -               -
 cosf          1               1               1               1               -
-cos           1               1               -               2               -
+cos           1               1               1               2               -
 cosl          1               -               1               -               -
 cosf128       -               -               -               -               -
 coshf         1               1               1               -               -
@@ -5962,15 +5962,15 @@ mul_ldouble   -               -               -               -               -
 mul_ldoublel  -               -               -               -               -
 mul_ldoublef128-               -               -               -               -
 powf          1               1               1               -               -
-pow           1               1               -               -               -
+pow           1               1               1               -               -
 powl          2               -               2               -               -
 powf128       -               -               -               -               -
 sinf          1               1               1               -               -
-sin           1               1               -               -               -
+sin           1               1               1               -               -
 sinl          1               -               1               -               -
 sinf128       -               -               -               -               -
 sincosf       1               1               1               1               -
-sincos        1               1               -               1               -
+sincos        1               1               1               1               -
 sincosl       1               -               1               -               -
 sincosf128    -               -               -               -               -
 sinhf         2               2               2               -               -

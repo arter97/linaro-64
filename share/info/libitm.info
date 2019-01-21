@@ -1,5 +1,5 @@
 This is libitm.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/libitm/libitm.texi.
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/libitm/libitm.texi.
 
 Copyright (C) 2011-2018 Free Software Foundation, Inc.
 
@@ -1308,15 +1308,15 @@ Library Index
 
 
 Tag Table:
-Node: Top1242
-Node: Enabling libitm2145
-Node: C/C++ Language Constructs for TM2539
-Node: The libitm ABI4019
-Ref: txn-code-properties7812
-Node: Internals18866
-Ref: serial-lock-impl28891
-Ref: progress-guarantees33641
-Node: GNU Free Documentation License35915
-Node: Library Index61064
+Node: Top1241
+Node: Enabling libitm2144
+Node: C/C++ Language Constructs for TM2538
+Node: The libitm ABI4018
+Ref: txn-code-properties7811
+Node: Internals18865
+Ref: serial-lock-impl28890
+Ref: progress-guarantees33640
+Node: GNU Free Documentation License35914
+Node: Library Index61063
 
 End Tag Table

@@ -1,5 +1,5 @@
 This is doc/cppinternals.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/cppinternals.texi.
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/cppinternals.texi.
 
 INFO-DIR-SECTION Software development
 START-INFO-DIR-ENTRY
@@ -1019,17 +1019,17 @@ Concept Index
 
 
 Tag Table:
-Node: Top1013
-Node: Conventions2698
-Node: Lexer3640
-Ref: Invalid identifiers11552
-Ref: Lexing a line13501
-Node: Hash Nodes18270
-Node: Macro Expansion21149
-Node: Token Spacing30092
-Node: Line Numbering35951
-Node: Guard Macros40036
-Node: Files44827
-Node: Concept Index48293
+Node: Top1012
+Node: Conventions2697
+Node: Lexer3639
+Ref: Invalid identifiers11551
+Ref: Lexing a line13500
+Node: Hash Nodes18269
+Node: Macro Expansion21148
+Node: Token Spacing30091
+Node: Line Numbering35950
+Node: Guard Macros40035
+Node: Files44826
+Node: Concept Index48292
 
 End Tag Table

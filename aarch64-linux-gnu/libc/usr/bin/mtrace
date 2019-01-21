@@ -21,8 +21,8 @@ eval "exec /usr/bin/perl -S $0 $@"
 # <http://www.gnu.org/licenses/>.
 
 $VERSION = "2.28";
-$PKGVERSION = "(GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26)) ";
-$REPORT_BUGS_TO = '<http://www.gnu.org/software/libc/bugs.html>';
+$PKGVERSION = "(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28)) ";
+$REPORT_BUGS_TO = '<https://bugs.linaro.org/>';
 $progname = $0;
 
 sub usage {

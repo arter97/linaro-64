@@ -1,5 +1,5 @@
 This is
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/build-aarch64-linux-gnu/obj/glibc/manual/libc.info,
 produced by makeinfo version 4.13 from libc.texinfo.
 
 INFO-DIR-SECTION Software libraries
@@ -2060,8 +2060,8 @@ END-INFO-DIR-ENTRY
    This file documents the GNU C Library.
 
    This is `The GNU C Library Reference Manual', for version 2.28
-(GNU Toolchain for the A-profile Architecture 8.2-2018.11
-(arm-rel-8.26)).
+(GNU Toolchain for the A-profile Architecture 8.2-2019.01
+(arm-rel-8.28)).
 
    Copyright (C) 1993-2018 Free Software Foundation, Inc.
 
@@ -8848,6 +8848,17 @@ the virtual memory subsystem of the GNU C Library.
      `glibc.malloc.tcache_unsorted_limit' tunable is set.  Argument
      $ARG1 is the requested value, and $ARG2 is the previous value of
      this tunable.
+
+ -- Probe: memory_tcache_double_free (void *$ARG1, int $ARG2)
+     This probe is triggered when `free' determines that the memory
+     being freed has probably already been freed, and resides in the
+     per-thread cache.  Note that there is an extremely unlikely chance
+     that this probe will trigger due to random payload data remaining
+     in the allocated memory matching the key used to detect double
+     frees.  This probe actually indicates that an expensive linear
+     search of the tcache, looking for a double free, has happened.
+     Argument $ARG1 is the memory location as passed to `free',
+     Argument $ARG2 is the tcache bin it resides in.
 
 
 File: libc.info,  Node: Mathematical Function Probes,  Next: Non-local Goto Probes,  Prev: Memory Allocation Probes,  Up: Internal Probes

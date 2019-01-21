@@ -47,7 +47,7 @@ do_help() {
   echo
 
   printf $"For bug reporting instructions, please see:\\n%s.\\n" \
-    "<http://www.gnu.org/software/libc/bugs.html>"
+    "<https://bugs.linaro.org/>"
   exit 0
 }
 
@@ -71,7 +71,7 @@ do_ambiguous() {
 while test $# -gt 0; do
   case "$1" in
   --v | --ve | --ver | --vers | --versi | --versio | --version)
-    echo "sotruss (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26)) 2.28"
+    echo "sotruss (GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28)) 2.28"
     printf $"Copyright (C) %s Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
