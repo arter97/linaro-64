@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "DLLTOOL 1"
-.TH DLLTOOL 1 "2018-10-15" "binutils-2.31.1" "GNU Development Tools"
+.TH DLLTOOL 1 "2019-02-17" "binutils-2.32" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -217,7 +217,7 @@ which in turn will import LoadLibraryA and GetProcAddress from kernel32.
 .PP
 \&\fBdlltool\fR builds the library file by hand, but it builds the
 exports file by creating temporary files containing assembler statements
-and then assembling these.  The \fB\-S\fR command line option can be
+and then assembling these.  The \fB\-S\fR command-line option can be
 used to specify the path to the assembler that dlltool will use,
 and the \fB\-f\fR option can be used to pass specific flags to that
 assembler.  The \fB\-n\fR can be used to prevent dlltool from deleting
@@ -241,7 +241,7 @@ to determine the name of the \s-1DLL\s0 to which it is associated.  See the
 description of the \fB\-I\fR or \fB\-\-identify\fR option.
 .SH "OPTIONS"
 .IX Header "OPTIONS"
-The command line options have the following meanings:
+The command-line options have the following meanings:
 .IP "\fB\-d\fR \fIfilename\fR" 4
 .IX Item "-d filename"
 .PD 0
@@ -327,7 +327,7 @@ to create the exports file.
 .IP "\fB\-\-as\-flags\fR \fIoptions\fR" 4
 .IX Item "--as-flags options"
 .PD
-Specifies any specific command line options to be passed to the
+Specifies any specific command-line options to be passed to the
 assembler when building the exports file.  This option will work even if
 the \fB\-S\fR option is not used.  This option only takes one argument,
 and if it occurs more than once on the command line, then later
@@ -502,7 +502,7 @@ Make dlltool describe what it is doing.
 .IP "\fB\-\-help\fR" 4
 .IX Item "--help"
 .PD
-Displays a list of command line options and then exits.
+Displays a list of command-line options and then exits.
 .IP "\fB\-V\fR" 4
 .IX Item "-V"
 .PD 0
@@ -528,7 +528,7 @@ with a backslash.  The \fIfile\fR may itself contain additional
 The Info pages for \fIbinutils\fR.
 .SH "COPYRIGHT"
 .IX Header "COPYRIGHT"
-Copyright (c) 1991\-2018 Free Software Foundation, Inc.
+Copyright (c) 1991\-2019 Free Software Foundation, Inc.
 .PP
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the \s-1GNU\s0 Free Documentation License, Version 1.3
