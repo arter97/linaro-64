@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "LD 1"
-.TH LD 1 "2019-02-17" "binutils-2.32" "GNU Development Tools"
+.TH LD 1 "2019-03-07" "binutils-2.32.51.0.1" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -1202,7 +1202,7 @@ the order that it is specified on the command line.  If a symbol in that
 archive is needed to resolve an undefined symbol referred to by an
 object in an archive that appears later on the command line, the linker
 would not be able to resolve that reference.  By grouping the archives,
-they all be searched repeatedly until all possible references are
+they will all be searched repeatedly until all possible references are
 resolved.
 .Sp
 Using this option has a significant performance cost.  It is best to use
@@ -2193,6 +2193,9 @@ internal references to \fIsymbol\fR are not resolved to
 \&          return f();
 \&        }
 .Ve
+.Sp
+Please keep in mind that with link-time optimization (\s-1LTO\s0) enabled, your whole
+program may be a translation unit.
 .IP "\fB\-\-eh\-frame\-hdr\fR" 4
 .IX Item "--eh-frame-hdr"
 .PD 0

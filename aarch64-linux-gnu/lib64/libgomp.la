@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libgomp.so.1'
+dlname=''
 
 # Names of this library.
-library_names='libgomp.so.1.0.0 libgomp.so.1 libgomp.so'
+library_names=''
 
 # The name of the static archive.
 old_library='libgomp.a'
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/aarch64-linux-gnu/lib/../lib64'
+libdir='/home/arter97/linaro-64/aarch64-linux-gnu/lib/../lib64'
