@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "LD 1"
-.TH LD 1 "2019-03-07" "binutils-2.32.51.0.1" "GNU Development Tools"
+.TH LD 1 "2019-05-11" "binutils-2.32.51.0.1" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -660,6 +660,14 @@ is 0x1, and \fIbar.o\fR, whose 0xc0010001 property value is 0x1.
 .RE
 .RS 4
 .RE
+.IP "\fB\-\-print\-map\-discarded\fR" 4
+.IX Item "--print-map-discarded"
+.PD 0
+.IP "\fB\-\-no\-print\-map\-discarded\fR" 4
+.IX Item "--no-print-map-discarded"
+.PD
+Print (or do not print) the list of discarded and garbage collected sections
+in the link map.  Enabled by default.
 .IP "\fB\-n\fR" 4
 .IX Item "-n"
 .PD 0
@@ -717,7 +725,7 @@ Note that the location of the compiler originated plugins is different
 from the place where the \fBar\fR, \fBnm\fR and
 \&\fBranlib\fR programs search for their plugins.  In order for
 those commands to make use of a compiler based plugin it must first be
-copied into the \fI${libdir}/bfd\-plugins\fR directory.  All gcc
+copied into the \fI${bindir}/../lib/bfd\-plugins\fR directory.  All gcc
 based linker plugins are backward compatible, so it is sufficient to
 just copy in the newest one.
 .IP "\fB\-\-push\-state\fR" 4
@@ -1000,6 +1008,25 @@ to a locally defined function, foo, via its \s-1GOT\s0 slot.
 \&\fBcall\-nop=prefix\-\fR\fIbyte\fR generates \f(CW\*(C`\f(CIbyte\f(CW call foo\*(C'\fR.
 \&\fBcall\-nop=suffix\-\fR\fIbyte\fR generates \f(CW\*(C`call foo \f(CIbyte\f(CW\*(C'\fR.
 Supported for i386 and x86_64.
+.IP "\fBcet\-report=none\fR" 4
+.IX Item "cet-report=none"
+.PD 0
+.IP "\fBcet\-report=warning\fR" 4
+.IX Item "cet-report=warning"
+.IP "\fBcet\-report=error\fR" 4
+.IX Item "cet-report=error"
+.PD
+Specify how to report the missing \s-1GNU_PROPERTY_X86_FEATURE_1_IBT\s0 and
+\&\s-1GNU_PROPERTY_X86_FEATURE_1_SHSTK\s0 properties in input .note.gnu.property
+section.  \fBcet\-report=none\fR, which is the default, will make the
+linker not report missing properties in input files.
+\&\fBcet\-report=warning\fR will make the linker issue a warning for
+missing properties in input files.  \fBcet\-report=error\fR will make
+the linker issue an error for missing properties in input files.
+Note that \fBibt\fR will turn off the missing
+\&\s-1GNU_PROPERTY_X86_FEATURE_1_IBT\s0 property report and \fBshstk\fR will
+turn off the missing \s-1GNU_PROPERTY_X86_FEATURE_1_SHSTK\s0 property report.
+Supported for Linux/i386 and Linux/x86_64.
 .IP "\fBcombreloc\fR" 4
 .IX Item "combreloc"
 .PD 0

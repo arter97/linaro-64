@@ -129,7 +129,7 @@
 .\" ========================================================================
 .\"
 .IX Title "OBJDUMP 1"
-.TH OBJDUMP 1 "2019-03-07" "binutils-2.32.51.0.1" "GNU Development Tools"
+.TH OBJDUMP 1 "2019-05-11" "binutils-2.32.51.0.1" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -304,6 +304,10 @@ argument is given, then display the assembler mnemonics starting at
 will stop at the end of the function, otherwise it will stop when the
 next symbol is encountered.  If there are no matches for \fIsymbol\fR
 then nothing will be displayed.
+.Sp
+Note if the \fB\-\-dwarf=follow\-links\fR option has also been enabled
+then any symbol tables in linked debug info files will be read in and
+used when disassembling.
 .IP "\fB\-D\fR" 4
 .IX Item "-D"
 .PD 0
@@ -325,6 +329,10 @@ is stored in code sections.
 If the target is an \s-1ARM\s0 architecture this switch also has the effect
 of forcing the disassembler to decode pieces of data found in code
 sections as if they were instructions.
+.Sp
+Note if the \fB\-\-dwarf=follow\-links\fR option has also been enabled
+then any symbol tables in linked debug info files will be read in and
+used when disassembling.
 .IP "\fB\-\-prefix\-addresses\fR" 4
 .IX Item "--prefix-addresses"
 When disassembling, print the complete address on each line.  This is
@@ -880,8 +888,8 @@ output from this option can also be restricted by the use of the
 .IX Item "=links"
 .PD
 Displays the contents of the \fB.gnu_debuglink\fR and/or
-\&\fB.gnu_debugaltlink\fR sections.  Also displays the link to a
-separate dwarf object file (dwo), if one is specified by the 
+\&\fB.gnu_debugaltlink\fR sections.  Also displays any links to
+separate dwarf object files (dwo), if they are specified by the 
 DW_AT_GNU_dwo_name or DW_AT_dwo_name attributes in the
 \&\fB.debug_info\fR section.
 .ie n .IP """K""" 4
@@ -893,10 +901,9 @@ DW_AT_GNU_dwo_name or DW_AT_dwo_name attributes in the
 .IX Item "=follow-links"
 .PD
 Display the contents of any selected debug sections that are found in
-a linked, separate debug info file.  This can result in multiple
-versions of the same debug section being displayed if both the main
-file and the separate debug info file contain sections with the same
-name.
+linked, separate debug info file(s).  This can result in multiple
+versions of the same debug section being displayed if it exists in
+more than one file.
 .Sp
 In addition, when displaying \s-1DWARF\s0 attributes, if a form is found that
 references the separate debug info file, then the referenced contents
